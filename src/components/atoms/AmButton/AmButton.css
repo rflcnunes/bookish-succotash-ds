@@ -1,0 +1,160 @@
+.am-button {
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 1em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+
+.am-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+
+.am-button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+
+.am-button--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+.am-button--primary {
+  background-color: #3875f6;
+  color: white;
+}
+
+.am-button--primary:hover {
+  background-color: #5794f7;
+}
+
+.am-button--primary:active {
+  background-color: #2657d1;
+}
+
+.am-button--purple {
+  background-color: #7b61ff;
+  color: white;
+}
+
+.am-button--purple:hover {
+  background-color: #9d8afa;
+}
+
+.am-button--purple:active {
+  background-color: #5943c8;
+}
+
+.am-button--dashed {
+  background-color: transparent;
+  color: #222;
+  border: 1px dashed #d9d9d9;
+}
+
+.am-button--dashed:hover {
+  background-color: #ffffff;
+  color: #3875f6;
+  border-color: #3875f6;
+}
+
+.am-button--dashed:active {
+  background-color: #ffffff;
+  color: #2657d1;
+  border-color: #2657d1;
+}
+
+.am-button--error {
+  color: white;
+  background-color: #ff5962;
+}
+
+.am-button--error:hover {
+  background-color: #ff777f;
+}
+
+.am-button--error:active {
+  background-color: #e44b53;
+}
+
+.am-button--outlined {
+  background-color: transparent;
+  color: #222;
+  border: 1px solid #d9d9d9;
+}
+
+.am-button--outlined:hover {
+  background-color: transparent;
+  color: #3875f6;
+  border-color: #3875f6;
+}
+
+.am-button--outlined:active {
+  background-color: transparent;
+  color: #2657d1;
+  border-color: #2657d1;
+}
+
+.am-button--green {
+  color: white;
+  background-color: #00b0a6;
+}
+
+.am-button--green:hover {
+  background-color: #37c9c0;
+}
+
+.am-button--green:active {
+  background-color: #00968d;
+}
+
+.am-button--yellow {
+  background-color: #fdcd3b;
+  color: #000000;
+}
+
+.am-button--yellow:hover {
+  background-color: #ffa300;
+  color: #ffffff;
+}
+
+.am-button--yellow:active {
+  background-color: #ff3d00;
+  color: #ffffff;
+}
+
+.am-button--pure-yellow {
+  background-color: #F8C104;
+  color: #000000;
+}
+
+.am-button--pure-yellow:hover {
+  background-color: #F7D038;
+  color: #000000;
+}
+
+.am-button--pure-yellow:active {
+  background-color: #DAA520;
+  color: #000000;
+}
+
+.am-button--outlined-yellow {
+  background-color: transparent;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+.am-button--outlined-yellow:hover {
+  background-color: transparent;
+  color: #fdcd3b;
+  border-color: #fdcd3b;
+}
+
+.am-button--outlined-yellow:active {
+  background-color: transparent;
+  color: #ff3d00;
+  border-color: #ff3d00;
+}

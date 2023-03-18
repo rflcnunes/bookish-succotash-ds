@@ -1,0 +1,133 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import AmButton from './AmButton.vue';
+
+<Meta title="Atoms/Button/Introduction" />
+
+export const Template = (args) => ({
+  components: { AmButton },
+  setup() {
+    return { args };
+  },
+  template: '<AmButton v-bind="args" />',
+});
+
+# AmButton
+The component ``AmButton`` is a customizable button in Vue.js, which can be used to create buttons with different sizes, style variations, background colors and labels.
+
+
+## Props
+The component `AmButton` has the following properties:
+
+- `size` (String, optional): Defines the size of the button. The possible values are small, medium, and large. The default value is medium.
+- `variant` (String, optional): Defines the style of the button. The possible values are primary, secondary, dashed, purple, error, outlined, and green. The default value is primary.
+- `label` (String, optional): Defines the text that will be displayed on the button. The default value is "Button".
+- `disabled` (Boolean, optional)
+
+## Stories
+
+### Primary
+<Story
+  name="Primary"
+  args={{
+    variant: 'primary'
+  }}>
+  {Template.bind({})}
+</Story>
+
+### Dashed
+<Story
+  name="Dashed"
+  args={{
+    variant: 'dashed'
+  }}>
+  {Template.bind({})}
+</Story>
+
+### Purple
+<Story
+  name="Purple"
+  args={{
+    variant: 'purple'
+  }}>
+  {Template.bind({})}
+</Story>
+
+### Green
+<Story
+  name="Green"
+  args={{
+    variant: 'green'
+  }}>
+  {Template.bind({})}
+</Story>
+
+### Outlined
+<Story
+  name="Outlined"
+  args={{
+    variant: 'outlined'
+  }}>
+  {Template.bind({})}
+</Story>
+
+### Error
+<Story
+  name="Error"
+  args={{
+    variant: 'error'
+  }}>
+  {Template.bind({})}
+</Story>
+
+### Yellow
+<Story
+  name="Yellow"
+  args={{
+    variant: 'yellow'
+  }}>
+  {Template.bind({})}
+</Story>
+
+### Yellow Outlined
+<Story
+  name="Outlined Yellow"
+  args={{
+    variant: 'outlined-yellow'
+  }}>
+  {Template.bind({})}
+</Story>
+
+### Pure Yellow
+<Story
+  name="Pure Yellow"
+  args={{
+    variant: 'pure-yellow'
+  }}>
+  {Template.bind({})}
+</Story>
+
+
+### Usage
+
+```vue
+<template>
+  <div>
+    <AmButton size="large" variant="secondary" label="Clique aqui" @click="handleClick" />
+  </div>
+</template>
+
+<script>
+import AmButton from '@/components/AmButton.vue';
+
+export default {
+  components: {
+    AmButton,
+  },
+  methods: {
+    handleClick() {
+      console.log('Botão clicado!');
+    },
+  },
+};
+</script>
+```
