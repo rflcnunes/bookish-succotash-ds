@@ -81,7 +81,6 @@ describe("AmSidebar.vue", () => {
 
     const menuItems = wrapper.findAll(".am-sidebar__menu li");
 
-    console.log(menuItems.length);
     menuItems.wrappers.forEach((item) => {
       expect(items.map((i) => i.label).includes(item.text())).toBe(true);
     });
