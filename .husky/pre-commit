@@ -6,6 +6,7 @@
 
 # Load husky
 . "$(dirname -- "$0")/_/husky.sh"
+echo "🐶 Husky loaded"
 
 # Run unit tests
 echo "🏃 Running unit tests..."
