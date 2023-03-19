@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+# Description: 📝 Validates that each component has a corresponding story file
+# Author: 👨‍💻 Rafael da Costa Nunes
+# Date: 📅 March 2023
+
+# Load husky
+. "$(dirname -- "$0")/_/husky.sh"
+echo "🐶 Husky loaded"
+
+# Run unit tests
+echo "🏃 Running unit tests..."
+npm run test:unit
+
+# Validate component stories
+echo "🕵️‍♀️ Validating component stories..."
+for folder in "src/components/atoms" "src/components/molecules" "src/components/organisms"; do
+  for file in $(find "$folder" -type f -name "*.vue"); do
+    componentName=$(basename "$(dirname "$file")")
+    if [ ! -f "$(dirname "$file")/${componentName}.stories.js" ]; then
+      echo "❌ ERROR: No story file found for $componentName in $(dirname "$file")"
+      exit 1
+    else
+      echo "✅ SUCCESS: $componentName has a corresponding story file"
+    fi
+  done
+done

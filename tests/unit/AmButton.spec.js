@@ -46,4 +46,15 @@ describe("AmButton.vue", () => {
     await wrapper.trigger("click");
     expect(wrapper.classes()).toContain("am-button--clicked");
   });
+
+  it("should render a primary button with medium size", () => {
+    const wrapper = shallowMount(AmButton, {
+      propsData: {
+        size: "medium",
+        variant: "primary",
+        label: "Click me",
+      },
+    });
+    expect(wrapper.element).toMatchSnapshot();
+  });
 });
