@@ -43,6 +43,7 @@ export default {
     return {
       sortColumn: "",
       sortDirection: "asc",
+      dataCopy: JSON.parse(JSON.stringify(this.data)),
     };
   },
   computed: {
@@ -53,10 +54,11 @@ export default {
       }));
     },
     items() {
+      const dataCopy = this.data.slice();
       if (!this.sortColumn) {
-        return this.data;
+        return dataCopy;
       }
-      return this.data.sort((a, b) =>
+      return dataCopy.sort((a, b) =>
         this.sortDirection === "asc"
           ? a[this.sortColumn].localeCompare(b[this.sortColumn])
           : b[this.sortColumn].localeCompare(a[this.sortColumn])
