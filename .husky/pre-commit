@@ -2,3 +2,11 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npm run test:unit
+
+for componentDir in components/{atoms,molecules,organisms}/*/; do
+  componentName=$(basename "$componentDir")
+  if [ ! -f "$componentDir$componentName.stories.js" ]; then
+    echo "Missing stories.js file for component $componentName in $componentDir"
+    exit 1
+  fi
+done
