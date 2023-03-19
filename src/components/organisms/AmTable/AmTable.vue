@@ -40,8 +40,8 @@
 </template>
 
 <script>
-import AmIcon from "@/components/atoms/AmIcon/AmIcon.vue";
-import AmTypography from "@/components/atoms/AmTypography/AmTypography.vue";
+import AmIcon from "../../atoms/AmIcon/AmIcon.vue";
+import AmTypography from "../../atoms/AmTypography/AmTypography.vue";
 
 export default {
   name: "AmTable",

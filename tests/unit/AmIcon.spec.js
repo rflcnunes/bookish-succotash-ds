@@ -1,5 +1,6 @@
 import { shallowMount } from "@vue/test-utils";
 import AmIcon from "@/components/atoms/AmIcon/AmIcon.vue";
+import AmTypography from "@/components/atoms/AmTypography/AmTypography.vue";
 
 describe("AmIcon", () => {
   test("renders a Material Icon with the correct class and style", () => {
@@ -8,6 +9,9 @@ describe("AmIcon", () => {
         icon: "add",
         color: "red",
         size: "32px",
+      },
+      stubs: {
+        AmTypography,
       },
     });
 
@@ -23,6 +27,9 @@ describe("AmIcon", () => {
     const wrapper = shallowMount(AmIcon, {
       propsData: {
         icon: "add",
+      },
+      stubs: {
+        AmTypography,
       },
     });
 
@@ -40,6 +47,9 @@ describe("AmIcon", () => {
         icon: "add",
         size: "invalid-size",
       },
+      stubs: {
+        AmTypography,
+      },
     });
 
     const iconElement = wrapper.find("i");
@@ -55,6 +65,9 @@ describe("AmIcon", () => {
       propsData: {
         icon: "add",
         variant: "secondary",
+      },
+      stubs: {
+        AmTypography,
       },
     });
 

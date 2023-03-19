@@ -1,5 +1,7 @@
 import { shallowMount } from "@vue/test-utils";
 import AmTable from "@/components/organisms/AmTable/AmTable.vue";
+import AmIcon from "@/components/atoms/AmIcon/AmIcon.vue";
+import AmTypography from "@/components/atoms/AmTypography/AmTypography.vue";
 
 describe("AmTable", () => {
   const header = [
@@ -18,6 +20,10 @@ describe("AmTable", () => {
       propsData: {
         header,
         data,
+      },
+      stubs: {
+        AmIcon,
+        AmTypography,
       },
     });
 
