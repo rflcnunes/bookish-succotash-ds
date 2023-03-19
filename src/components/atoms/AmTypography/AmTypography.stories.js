@@ -1,7 +1,7 @@
 import AmTypography from "./AmTypography.vue";
 
 export default {
-  title: "Typography",
+  title: "Atoms/AmTypography",
   component: AmTypography,
   argTypes: {
     size: {
