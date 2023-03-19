@@ -2,7 +2,7 @@ import AmTable from "./AmTable.vue";
 import pretty from "pretty";
 
 export default {
-  title: "Atoms/AmTable",
+  title: "Organisms/AmTable",
   component: AmTable,
 };
 

@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils";
-import AmTable from "@/components/atoms/AmTable/AmTable.vue";
+import AmTable from "@/components/organisms/AmTable/AmTable.vue";
 
 describe("AmTable", () => {
   const header = [
