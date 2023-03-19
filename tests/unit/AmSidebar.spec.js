@@ -86,5 +86,6 @@ describe("AmSidebar.vue", () => {
     });
 
     expect(menuItems.length).toBe(items.length);
+    expect(wrapper.html()).toMatchSnapshot();
   });
 });
