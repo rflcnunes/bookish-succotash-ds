@@ -3,10 +3,12 @@
 
 npm run test:unit
 
-for componentDir in components/{atoms,molecules,organisms}/*/; do
-  componentName=$(basename "$componentDir")
-  if [ ! -f "$componentDir$componentName.stories.js" ]; then
-    echo "Missing stories.js file for component $componentName in $componentDir"
-    exit 1
-  fi
+for folder in src/components/atoms src/components/molecules src/components/organisms; do
+  for file in $(find $folder -type f -name '*.vue'); do
+    componentName=$(basename $(dirname $file))
+    if [ ! -f $(dirname $file)/${componentName}.stories.js ]; then
+      echo "No story file found for $componentName in $(dirname $file)"
+      exit 1
+    fi
+  done
 done
