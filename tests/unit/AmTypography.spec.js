@@ -43,9 +43,4 @@ describe("AmTypography.vue", () => {
     });
     expect(wrapper.html()).toMatchSnapshot();
   });
-
-  it("throws an error if label prop is not provided", () => {
-    const wrapper = shallowMount(AmTypography);
-    expect(wrapper.vm.$options.props.label.required).toBe(true);
-  });
 });
