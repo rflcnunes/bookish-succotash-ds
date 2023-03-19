@@ -3,13 +3,14 @@
     <div class="am-sidebar__header">
       <slot name="logo"></slot>
       <button class="am-sidebar__toggle" @click="isOpen = !isOpen">
-        <span v-if="isOpen">Close</span>
-        <span v-else>Open</span>
+        <AmIcon :icon="isOpen ? 'close' : 'menu'" />
       </button>
     </div>
     <ul class="am-sidebar__menu">
       <li v-for="item in items" :key="item.label">
-        <a :href="item.url">{{ item.label }}</a>
+        <router-link class="link" :to="item.link">
+          <AmTypography variant="slab" size="md" :label="item.label" />
+        </router-link>
       </li>
     </ul>
     <div class="am-sidebar__footer">
@@ -19,6 +20,9 @@
 </template>
 
 <script>
+import AmIcon from "../AmIcon/AmIcon.vue";
+import AmTypography from "../AmTypography/AmTypography.vue";
+
 export default {
   name: "AmSidebar",
   props: {
@@ -29,20 +33,27 @@ export default {
   },
   data() {
     return {
-      isOpen: true,
+      isOpen: false,
     };
   },
+  components: { AmIcon, AmTypography },
 };
 </script>
 
 <style scoped>
 .am-sidebar {
-  width: 250px;
-  height: 100vh;
+  width: 300px;
+  height: 95vh;
   background-color: #fff;
   transition: transform 0.3s ease-in-out;
   transform: translateX(-250px);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.link {
+  color: #333;
+  text-decoration: none;
 }
 
 .am-sidebar--open {
@@ -52,11 +63,9 @@ export default {
 .am-sidebar__header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: 60px;
   padding: 0 20px;
-  border-bottom: 1px solid #ddd;
-  background-color: #f5f5f5;
 }
 
 .am-sidebar__toggle {
@@ -80,7 +89,6 @@ export default {
 
 .am-sidebar__menu li {
   padding: 10px 20px;
-  border-bottom: 1px solid #ddd;
   transition: background-color 0.2s ease-in-out;
 }
 
@@ -89,7 +97,11 @@ export default {
 }
 
 .am-sidebar__menu li:hover {
-  background-color: #f5f5f5;
+  background-color: #3875f6;
+}
+
+.am-sidebar__menu li:hover .link {
+  color: #fff;
 }
 
 .am-sidebar__footer {
