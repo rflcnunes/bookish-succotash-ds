@@ -64,5 +64,6 @@ describe("AmIcon", () => {
     expect(iconElement.classes()).toContain("am-icon--24px");
     expect(iconElement.attributes("style")).toBeUndefined();
     expect(iconElement.text()).toBe("add");
+    expect(wrapper.element).toMatchSnapshot();
   });
 });
