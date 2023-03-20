@@ -1,0 +1,89 @@
+import { Meta, Story } from "@storybook/addon-docs";
+import AmAlert from "./AmAlert.vue";
+
+<Meta title="Molecules/AmAlert/Introduction" />
+
+export const Template = (args) => ({
+  components: { AmAlert },
+  setup() {
+    return { args };
+  },
+  template: '<AmAlert v-bind="args" />',
+});
+
+# AmAlert
+
+The component `AmAlert` is used to display a message to the user.
+
+## Props
+The component AmAlert has the following properties:
+
+- `variation` (String, opcional): A string prop that defines the type of the message, with the possible values of "warning", "error", "success", "info", or "helper". The default value is "info". The prop also includes a validator function that checks if the provided value is one of the accepted values.
+- `title` (String, opcional): A string prop that defines the title of the message. The default value is an empty string.
+- `text` (String, opcional): A string prop that defines the main text of the message. The default value is an empty string.
+- `link` (String, opcional): A string prop that defines a link that can be included in the message. The default value is an empty string.
+- `linkLabel` (String, opcional): A string prop that defines the label for the link. The default value is "Learn more".
+
+## Stories
+
+### Success
+<Story
+  name="Success"
+  args={{
+    variation: "success",
+    title: "Success",
+    text: "This is a success message!",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+### Error
+<Story
+  name="Error"
+  args={{
+    variation: "error",
+    title: "Error",
+    text: "This is a error message!",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+### Warning
+<Story
+  name="Warning"
+  args={{
+    variation: "warning",
+    title: "Warning",
+    text: "This is a warning message!",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+### Info
+<Story
+  name="Info"
+  args={{
+    variation: "info",
+    title: "Info",
+    text: "This is a info message!",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+### With Link
+<Story
+  name="With Link"
+  args={{
+    variation: "success",
+    title: "Success",
+    text: "This is a success message with action!",
+    link: "https://www.amsterdam.nl",
+    linkLabel: "Link label",
+  }}
+>
+  {Template.bind({})}
+</Story>

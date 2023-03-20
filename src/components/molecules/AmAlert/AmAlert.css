@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.am-alert {
+  position: relative;
+  border: 1px solid transparent;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  grid-template-columns: 0.1fr 2fr;
+}
+
+.am-alert__icon {
+  display: flex;
+  align-items: center;
+}
+
+.am-alert__content {
+  display: grid;
+  grid-gap: 0.5rem;
+}
+
+.am-alert__link {
+  text-decoration: none;
+}
