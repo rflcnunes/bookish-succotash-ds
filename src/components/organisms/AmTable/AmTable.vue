@@ -7,17 +7,32 @@
           :key="column.key"
           @click="sort(column.key)"
         >
-          {{ column.label }}
-          <span v-if="sortColumn === column.key">
-            {{ sortDirection === "asc" ? "▲" : "▼" }}
-          </span>
+          <div class="sort_row">
+            <AmTypography
+              variant="slab"
+              size="md"
+              :label="column.label"
+              class="sort"
+            />
+            <AmIcon
+              class="sort-icon"
+              v-if="sortColumn === column.key"
+              :icon="
+                sortDirection === 'asc'
+                  ? 'keyboard_arrow_up'
+                  : 'keyboard_arrow_down'
+              "
+            />
+          </div>
         </th>
       </tr>
     </thead>
     <tbody>
       <tr v-for="item in items" :key="item.id">
         <td v-for="column in columns" :key="column.key">
-          {{ item[column.key] }}
+          <div>
+            {{ item[column.key] }}
+          </div>
         </td>
       </tr>
     </tbody>
@@ -25,8 +40,15 @@
 </template>
 
 <script>
+import AmIcon from "../../atoms/AmIcon/AmIcon.vue";
+import AmTypography from "../../atoms/AmTypography/AmTypography.vue";
+
 export default {
   name: "AmTable",
+  components: {
+    AmIcon,
+    AmTypography,
+  },
   props: {
     header: {
       type: Array,
@@ -43,6 +65,7 @@ export default {
     return {
       sortColumn: "",
       sortDirection: "asc",
+      dataCopy: JSON.parse(JSON.stringify(this.data)),
     };
   },
   computed: {
@@ -53,10 +76,11 @@ export default {
       }));
     },
     items() {
+      const dataCopy = this.data.slice();
       if (!this.sortColumn) {
-        return this.data;
+        return dataCopy;
       }
-      return this.data.sort((a, b) =>
+      return dataCopy.sort((a, b) =>
         this.sortDirection === "asc"
           ? a[this.sortColumn].localeCompare(b[this.sortColumn])
           : b[this.sortColumn].localeCompare(a[this.sortColumn])
@@ -86,7 +110,6 @@ th,
 td {
   padding: 8px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
 }
 
 th {
@@ -95,5 +118,14 @@ th {
 
 th span {
   margin-left: 5px;
+}
+
+tr th {
+  border-bottom: 2px solid rgba(107, 119, 140, 0.3);
+  color: #6b778c;
+}
+
+.sort_row {
+  display: flex;
 }
 </style>
