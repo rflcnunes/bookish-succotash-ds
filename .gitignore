@@ -25,3 +25,4 @@ pnpm-debug.log*
 *.sln
 *.sw?
 tests/unit/__snapshots__/
+storybook-static/

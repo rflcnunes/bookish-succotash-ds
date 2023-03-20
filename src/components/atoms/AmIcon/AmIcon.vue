@@ -3,6 +3,7 @@
     icon
   }}</i>
 </template>
+
 <script>
 export default {
   name: "AmIcon",

@@ -25,3 +25,17 @@ for folder in "src/components/atoms" "src/components/molecules" "src/components/
     fi
   done
 done
+
+# Validate component tests
+echo "🕵️‍♀️ Validating component tests..."
+for folder in "src/components/atoms" "src/components/molecules" "src/components/organisms"; do
+  for file in $(find "$folder" -type f -name "*.vue"); do
+    componentName=$(basename "$(dirname "$file")")
+    if [ ! -f "tests/unit/${componentName}.spec.js" ]; then
+      echo "❌ ERROR: No test file found for $componentName in tests/unit/"
+      exit 1
+    else
+      echo "✅ SUCCESS: $componentName has a corresponding test file"
+    fi
+  done
+done
