@@ -22,16 +22,47 @@
         :label="headerInformation.description"
       />
     </div>
+    <div class="am-product-box__body">
+      <div
+        class="am-product-box__body__card"
+        v-for="product in products"
+        :key="product"
+      >
+        <AmImage :src="product.url" hasShadow :alt="product.description" />
+        <div class="am-product-box__body__card__description">
+          <div class="am-product-box__body__card__description__price-title">
+            <AmTypography
+              variant="regular"
+              weight="medium"
+              :label="product.title"
+            />
+            <AmTypography
+              variant="regular"
+              weight="medium"
+              color="blue"
+              :label="product.price"
+            />
+          </div>
+          <AmTypography
+            variant="regular"
+            size="sm"
+            color="gray"
+            :label="product.description"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 import "./AmProductBox.scss";
 import AmTypography from "../../atoms/AmTypography/AmTypography.vue";
+import AmImage from "../../atoms/AmImage/AmImage.vue";
 
 export default {
   name: "AmProductBox",
-  components: { AmTypography },
+  components: { AmTypography, AmImage },
   props: {
     headerInformation: {
       type: Object,
@@ -40,6 +71,25 @@ export default {
         emphasisText: "Emphasis Text",
         description: "Product Box Description",
       }),
+    },
+    products: {
+      type: Array,
+      default: () => [
+        {
+          title: "Product Box Title",
+          emphasisText: "Emphasis Text",
+          description: "Product Box Description",
+          url: "https://picsum.photos/800",
+          price: "100",
+        },
+        {
+          title: "Product Box Title 02",
+          emphasisText: "Emphasis Text 02",
+          description: "Product Box Description 02",
+          url: "https://picsum.photos/700",
+          price: "200",
+        },
+      ],
     },
   },
 };
