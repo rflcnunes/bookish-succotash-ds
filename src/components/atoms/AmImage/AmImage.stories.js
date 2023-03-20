@@ -58,3 +58,31 @@ Default.args = {
   src: "https://picsum.photos/800",
   alt: "Placeholder image",
 };
+
+export const Small = Template.bind({});
+Small.args = {
+  src: "https://picsum.photos/800",
+  alt: "Placeholder image",
+  size: "small",
+};
+
+export const Large = Template.bind({});
+Large.args = {
+  src: "https://picsum.photos/800",
+  alt: "Placeholder image",
+  size: "large",
+};
+
+export const WithBorder = Template.bind({});
+WithBorder.args = {
+  src: "https://picsum.photos/800",
+  alt: "Placeholder image",
+  hasBorder: true,
+};
+
+export const WithShadow = Template.bind({});
+WithShadow.args = {
+  src: "https://picsum.photos/800",
+  alt: "Placeholder image",
+  hasShadow: true,
+};
