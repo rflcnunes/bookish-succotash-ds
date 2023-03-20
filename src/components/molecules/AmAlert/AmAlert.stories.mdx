@@ -87,3 +87,24 @@ The component AmAlert has the following properties:
 >
   {Template.bind({})}
 </Story>
+
+## Usage
+```vue
+<template>
+  <div>
+    <AmAlert variant="success" title="Success Title" text="This is a success message!" />
+    <AmAlert variant="warning" title="Warning Title" text="This is a warning message!" />
+    <AmAlert variant="error" title="Error Title" text="This is an error message!" />
+  </div>
+</template>
+
+<script>
+import AmAlert from '@/components/molecules/AmAlert/AmAlert.vue';
+
+export default {
+  components: {
+    AmAlert,
+  },
+};
+</script>
+```

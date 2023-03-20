@@ -22,13 +22,21 @@ export default {
   },
 };
 
-const Template = (args) => ({
+const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
   components: { AmAlert },
   setup() {
     return { args };
   },
   template: '<am-alert v-bind="args" />',
 });
+
+export const Default = Template.bind({});
+Default.args = {
+  variation: "success",
+  title: "Success",
+  text: "This is a success message!",
+};
 
 export const Warning = Template.bind({});
 Warning.args = {
