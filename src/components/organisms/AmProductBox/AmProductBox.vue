@@ -1,6 +1,5 @@
 <template>
   <div class="am-product-box">
-    <h1>AmProductBox</h1>
     <div class="am-product-box__header">
       <AmTypography
         variant="regular"
