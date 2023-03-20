@@ -4,6 +4,8 @@
       'am-typography',
       `am-typography--${variant}`,
       `am-typography--${size}`,
+      `am-typography--${weight}`,
+      `am-typography--${color}`,
     ]"
   >
     {{ label }}
@@ -24,6 +26,17 @@ export default {
       type: String,
       default: "regular",
       validator: (value) => ["regular", "condensed", "slab"].includes(value),
+    },
+    weight: {
+      type: String,
+      default: "normal",
+      validator: (value) =>
+        ["normal", "medium", "bold", "xbold"].includes(value),
+    },
+    color: {
+      type: String,
+      default: "black",
+      validator: (value) => ["black", "blue", "red", "gray"].includes(value),
     },
     label: {
       type: String,
@@ -79,5 +92,37 @@ export default {
 
 .am-typography--slab {
   font-family: "Roboto Slab", serif;
+}
+
+.am-typography--normal {
+  font-weight: 400;
+}
+
+.am-typography--medium {
+  font-weight: 500;
+}
+
+.am-typography--bold {
+  font-weight: 700;
+}
+
+.am-typography--xbold {
+  font-weight: 900;
+}
+
+.am-typography--black {
+  color: #000000;
+}
+
+.am-typography--blue {
+  color: #3056d3;
+}
+
+.am-typography--gray {
+  color: #637381;
+}
+
+.am-typography--red {
+  color: #dc3545;
 }
 </style>
