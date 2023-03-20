@@ -1,0 +1,174 @@
+import { Meta, Story } from "@storybook/addon-docs";
+import AmTag from "./AmTag.vue";
+
+<Meta title="Molecules/AmTag/Introduction" />
+
+export const Template = (args) => ({
+  components: { AmTag },
+  setup() {
+    return { args };
+  },
+  template: `
+    <AmTag v-bind="args" />
+  `,
+});
+
+# AmTag
+
+The `AmTag` component is used to display a tag.
+
+## Props
+The component AmTag has the following props:
+
+- `text` (String, required): The text to display in the tag.
+- `variant` (String, optional): The variant of the tag. Possible values are `gray`, `darkGray`, `blue`, `darkBlue`, `yellow`, `orange`, `purple`, `darkPurple`, `red`, `darkRed`, `green`, and `darkGreen`. Default value is `gray`.
+
+## Stories
+
+### Gray - Default
+<Story
+  name="Gray - Default"
+  args={{
+    text: "Tag",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+### Dark Gray
+<Story
+  name="Dark Gray"
+  args={{
+    text: "Tag",
+    variant: "darkGray",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+### Blue
+<Story
+  name="Blue"
+  args={{
+    text: "Tag",
+    variant: "blue",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+### Dark Blue
+<Story
+  name="Dark Blue"
+  args={{
+    text: "Tag",
+    variant: "darkBlue",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+### Yellow
+<Story
+  name="Yellow"
+  args={{
+    text: "Tag",
+    variant: "yellow",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+### Orange
+<Story
+  name="Orange"
+  args={{
+    text: "Tag",
+    variant: "orange",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+### Purple
+<Story
+  name="Purple"
+  args={{
+    text: "Tag",
+    variant: "purple",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+### Dark Purple
+<Story
+  name="Dark Purple"
+  args={{
+    text: "Tag",
+    variant: "darkPurple",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+### Red
+<Story
+  name="Red"
+  args={{
+    text: "Tag",
+    variant: "red",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+### Dark Red
+<Story
+  name="Dark Red"
+  args={{
+    text: "Tag",
+    variant: "darkRed",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+### Green
+<Story
+  name="Green"
+  args={{
+    text: "Tag",
+    variant: "green",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+### Dark Green
+<Story
+  name="Dark Green"
+  args={{
+    text: "Tag",
+    variant: "darkGreen",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+## Usage
+```vue
+<template>
+  <AmTag text="Tag" />
+</template>
+
+<script>
+import AmTag from "@/components/molecules/AmTag/AmTag.vue";
+
+export default {
+  components: {
+    AmTag,
+  },
+};
+</script>
+```
