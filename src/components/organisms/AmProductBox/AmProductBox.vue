@@ -26,7 +26,7 @@
       <div
         class="am-product-box__body__card"
         v-for="product in products"
-        :key="product"
+        :key="product.id"
       >
         <AmImage :src="product.url" hasShadow :alt="product.description" />
         <div class="am-product-box__body__card__description">
@@ -76,6 +76,7 @@ export default {
       type: Array,
       default: () => [
         {
+          id: 1,
           title: "Product Box Title",
           emphasisText: "Emphasis Text",
           description: "Product Box Description",
@@ -83,6 +84,7 @@ export default {
           price: "100",
         },
         {
+          id: 2,
           title: "Product Box Title 02",
           emphasisText: "Emphasis Text 02",
           description: "Product Box Description 02",
