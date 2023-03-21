@@ -3,7 +3,7 @@ import { toJS } from "mobx";
 import pretty from "pretty";
 
 export default {
-  title: "Atoms/Button",
+  title: "Atoms/AmButton",
   component: AmButton,
   argTypes: {
     size: {
