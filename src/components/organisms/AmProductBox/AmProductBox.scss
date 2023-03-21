@@ -1,6 +1,7 @@
 .am-product-box {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   &__header {
     display: flex;
@@ -13,6 +14,8 @@
   &__body {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    max-width: 80%;
 
     &__card {
       margin: 5px 10px;
