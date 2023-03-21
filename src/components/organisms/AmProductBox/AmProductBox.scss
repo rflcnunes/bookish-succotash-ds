@@ -18,10 +18,11 @@
       margin: 5px 10px;
 
       &__description {
-        &__price-title {
-          display: flex;
-          justify-content: space-between;
-        }
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 5px 0;
       }
     }
   }

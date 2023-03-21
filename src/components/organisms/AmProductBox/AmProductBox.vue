@@ -30,24 +30,22 @@
       >
         <AmImage :src="product.url" hasShadow :alt="product.description" />
         <div class="am-product-box__body__card__description">
-          <div class="am-product-box__body__card__description__price-title">
-            <AmTypography
-              variant="regular"
-              weight="medium"
-              :label="product.title"
-            />
-            <AmTypography
-              variant="regular"
-              weight="medium"
-              color="blue"
-              :label="product.price"
-            />
-          </div>
+          <AmTypography
+            variant="regular"
+            weight="medium"
+            :label="product.title"
+          />
           <AmTypography
             variant="regular"
             size="sm"
             color="gray"
             :label="product.description"
+          />
+          <AmTypography
+            variant="regular"
+            weight="medium"
+            color="blue"
+            :label="formattedPrice(product.price)"
           />
         </div>
       </div>
@@ -57,6 +55,7 @@
 
 <script>
 import "./AmProductBox.scss";
+import currency from "currency.js";
 import AmTypography from "../../atoms/AmTypography/AmTypography.vue";
 import AmImage from "../../atoms/AmImage/AmImage.vue";
 
@@ -92,6 +91,15 @@ export default {
           price: "200",
         },
       ],
+    },
+    currencySymbol: {
+      type: String,
+      default: "R$",
+    },
+  },
+  methods: {
+    formattedPrice(price) {
+      return currency(price, { symbol: this.currencySymbol }).format();
     },
   },
 };
