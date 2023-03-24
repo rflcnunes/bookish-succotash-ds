@@ -1,7 +1,14 @@
 <template>
-  <div class="loading-container" v-show="isLoading">
-    <div v-if="loadingType === 'spinner'" class="loading-spinner"></div>
-    <div v-if="loadingType === 'dots'" class="loading-dots">
+  <div
+    class="loading-container"
+    v-show="isLoading"
+    :class="{ completed: status === 'completed', error: status === 'error' }"
+  >
+    <div
+      v-if="statusIsLoading && loadingType === 'spinner'"
+      class="loading-spinner"
+    ></div>
+    <div v-if="statusIsLoading && loadingType === 'dots'" class="loading-dots">
       <div></div>
       <div></div>
       <div></div>
@@ -11,10 +18,18 @@
       <div class="loading-beats-bar"></div>
       <div class="loading-beats-bar"></div>
     </div>
+    <div v-if="status === 'completed'" class="completed-icon">
+      <AmIcon icon="check_circle" />
+    </div>
+    <div v-if="status === 'error'" class="error-icon">
+      <AmIcon icon="cancel" />
+    </div>
   </div>
 </template>
 
 <script>
+import AmIcon from "../AmIcon/AmIcon.vue";
+
 export default {
   name: "AmLoading",
   props: {
@@ -28,6 +43,19 @@ export default {
       validator: function (value) {
         return ["spinner", "dots", "beats"].indexOf(value) !== -1;
       },
+    },
+    status: {
+      type: String,
+      default: "loading",
+      validator: function (value) {
+        return ["loading", "completed", "error"].indexOf(value) !== -1;
+      },
+    },
+  },
+  components: { AmIcon },
+  computed: {
+    statusIsLoading() {
+      return this.status === "loading";
     },
   },
 };
@@ -43,6 +71,15 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: none;
+
+  &.completed {
+    color: #3cb371;
+  }
+
+  &.error {
+    color: #ff6347;
+  }
 }
 
 .loading-spinner {

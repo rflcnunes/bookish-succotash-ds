@@ -1,4 +1,5 @@
 import AmLoading from "./AmLoading.vue";
+import AmIcon from "../AmIcon/AmIcon.vue";
 
 export default {
   title: "Atoms/AmLoading",
@@ -10,16 +11,23 @@ export default {
     loadingType: {
       control: { type: "select", options: ["spinner", "dots"] },
     },
+    status: {
+      control: {
+        type: "select",
+        options: ["loading", "completed", "error"],
+        default: "loading",
+      },
+    },
   },
 };
 
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
-  components: { AmLoading },
+  components: { AmLoading, AmIcon },
   setup() {
     return { args };
   },
-  template: '<am-loading v-bind="$props" />',
+  template: `<AmLoading v-bind="$props" />`,
 });
 
 export const Default = Template.bind({});
@@ -44,4 +52,18 @@ export const Beats = Template.bind({});
 Beats.args = {
   isLoading: true,
   loadingType: "beats",
+};
+
+export const Completed = Template.bind({});
+Completed.args = {
+  isLoading: true,
+  loadingType: "spinner",
+  status: "completed",
+};
+
+export const Error = Template.bind({});
+Error.args = {
+  isLoading: true,
+  loadingType: "spinner",
+  status: "error",
 };
