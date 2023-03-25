@@ -92,6 +92,16 @@ const colors = [
   { name: "Fwb Purple Primary 20", value: "fwbPurplePrimary20" },
   { name: "Fwb Purple Primary 10", value: "fwbPurplePrimary10" },
   { name: "Fwb Purple Primary 5", value: "fwbPurplePrimary5" },
+  { name: "Fwb Pink Primary 90", value: "fwbPinkPrimary90" },
+  { name: "Fwb Pink Primary 80", value: "fwbPinkPrimary80" },
+  { name: "Fwb Pink Primary 70", value: "fwbPinkPrimary70" },
+  { name: "Fwb Pink Primary 60", value: "fwbPinkPrimary60" },
+  { name: "Fwb Pink Primary 50", value: "fwbPinkPrimary50" },
+  { name: "Fwb Pink Primary 40", value: "fwbPinkPrimary40" },
+  { name: "Fwb Pink Primary 30", value: "fwbPinkPrimary30" },
+  { name: "Fwb Pink Primary 20", value: "fwbPinkPrimary20" },
+  { name: "Fwb Pink Primary 10", value: "fwbPinkPrimary10" },
+  { name: "Fwb Pink Primary 5", value: "fwbPinkPrimary5" },
 ];
 
 const colorsValues = colors.map((color) => color.value);
