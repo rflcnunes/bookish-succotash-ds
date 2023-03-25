@@ -104,4 +104,28 @@
       cursor: not-allowed;
     }
   }
+
+  &--maxSuccess {
+    background-color: $maxSuccess100;
+    color: $white;
+    padding: 8px 12px 8px 12px;
+    width: 121px;
+    height: 34px;
+    border-radius: 8px;
+    font-weight: 500;
+
+    &:hover {
+      background-color: $maxSuccess120;
+    }
+
+    &:active {
+      background-color: $maxSuccess80;
+    }
+
+    &:disabled {
+      background-color: $maxSystemGray60;
+      color: $white;
+      cursor: not-allowed;
+    }
+  }
 }
