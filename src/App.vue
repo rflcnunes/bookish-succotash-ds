@@ -17,4 +17,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
+
+a {
+  text-decoration: none;
+}
 </style>

@@ -1,7 +1,13 @@
 <template>
-  <button :class="buttonClasses" @click="onClick" :disabled="disabled">
+  <component
+    v-bind:is="!to ? 'button' : 'router-link'"
+    :class="buttonClasses"
+    @click="onClick"
+    :disabled="disabled"
+    :to="to"
+  >
     {{ label }}
-  </button>
+  </component>
 </template>
 
 <script>
@@ -50,6 +56,10 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
+    },
+    to: {
+      type: String,
+      default: "",
     },
   },
 

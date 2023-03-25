@@ -3,6 +3,7 @@
 .am-button {
   border-radius: 8px;
   font-weight: 500;
+  font-family: $primaryFont;
 
   &--maxPrimary {
     background-color: $maxPrimaryPurple100;
