@@ -1,0 +1,359 @@
+@import "../../../styles/_variables.scss";
+
+.am-colors {
+  font-family: $primaryFont;
+}
+
+.am-colors__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 10px 0;
+
+
+  &__description {
+    font-size: $small;
+    font-weight: $medium;
+    text-align: flex-start;
+    margin-left: 5px;
+  }
+
+  &__color {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+
+    &__blue {
+      background-color: $blue;
+    }
+  
+    &__red {
+      background-color: $red;
+    }
+  
+    &__black {
+      background-color: $gray;
+    }
+  
+    &__fwbBluePrimary90 {
+      background-color: $fwbBluePrimary90;
+    }
+
+    &__fwbBluePrimary80 {
+      background-color: $fwbBluePrimary80;
+    }
+
+    &__fwbBluePrimary70 {
+      background-color: $fwbBluePrimary70;
+    }
+
+    &__fwbBluePrimary60 {
+      background-color: $fwbBluePrimary60;
+    }
+
+    &__fwbBluePrimary50 {
+      background-color: $fwbBluePrimary50;
+    }
+
+    &__fwbBluePrimary40 {
+      background-color: $fwbBluePrimary40;
+    }
+
+    &__fwbBluePrimary30 {
+      background-color: $fwbBluePrimary30;
+    }
+
+    &__fwbBluePrimary20 {
+      background-color: $fwbBluePrimary20;
+    }
+
+    &__fwbBluePrimary10 {
+      background-color: $fwbBluePrimary10;
+    }
+
+    &__fwbBluePrimary5 {
+      background-color: $fwbBluePrimary5;
+    }
+
+    &__fwbGrayPrimary90 {
+      background-color: $fwbGrayPrimary90;
+    }
+
+    &__fwbGrayPrimary80 {
+      background-color: $fwbGrayPrimary80;
+    }
+
+    &__fwbGrayPrimary70 {
+      background-color: $fwbGrayPrimary70;
+    }
+
+    &__fwbGrayPrimary60 {
+      background-color: $fwbGrayPrimary60;
+    }
+
+    &__fwbGrayPrimary50 {
+      background-color: $fwbGrayPrimary50;
+    }
+
+    &__fwbGrayPrimary40 {
+      background-color: $fwbGrayPrimary40;
+    }
+
+    &__fwbGrayPrimary30 {
+      background-color: $fwbGrayPrimary30;
+    }
+
+    &__fwbGrayPrimary20 {
+      background-color: $fwbGrayPrimary20;
+    }
+
+    &__fwbGrayPrimary10 {
+      background-color: $fwbGrayPrimary10;
+    }
+
+    &__fwbGrayPrimary5 {
+      background-color: $fwbGrayPrimary5;
+    }
+
+    &__fwbRedPrimary90 {
+      background-color: $fwbRedPrimary90;
+    }
+
+    &__fwbRedPrimary80 {
+      background-color: $fwbRedPrimary80;
+    }
+
+    &__fwbRedPrimary70 {
+      background-color: $fwbRedPrimary70;
+    }
+
+    &__fwbRedPrimary60 {
+      background-color: $fwbRedPrimary60;
+    }
+
+    &__fwbRedPrimary50 {
+      background-color: $fwbRedPrimary50;
+    }
+
+    &__fwbRedPrimary40 {
+      background-color: $fwbRedPrimary40;
+    }
+
+    &__fwbRedPrimary30 {
+      background-color: $fwbRedPrimary30;
+    }
+
+    &__fwbRedPrimary20 {
+      background-color: $fwbRedPrimary20;
+    }
+
+    &__fwbRedPrimary10 {
+      background-color: $fwbRedPrimary10;
+    }
+
+    &__fwbRedPrimary5 {
+      background-color: $fwbRedPrimary5;
+    }
+
+    &__fwbOrangePrimary90 {
+      background-color: $fwbOrangePrimary90;
+    }
+
+    &__fwbOrangePrimary80 {
+      background-color: $fwbOrangePrimary80;
+    }
+
+    &__fwbOrangePrimary70 {
+      background-color: $fwbOrangePrimary70;
+    }
+
+    &__fwbOrangePrimary60 {
+      background-color: $fwbOrangePrimary60;
+    }
+
+    &__fwbOrangePrimary50 {
+      background-color: $fwbOrangePrimary50;
+    }
+
+    &__fwbOrangePrimary40 {
+      background-color: $fwbOrangePrimary40;
+    }
+
+    &__fwbOrangePrimary30 {
+      background-color: $fwbOrangePrimary30;
+    }
+
+    &__fwbOrangePrimary20 {
+      background-color: $fwbOrangePrimary20;
+    }
+
+    &__fwbOrangePrimary10 {
+      background-color: $fwbOrangePrimary10;
+    }
+
+    &__fwbOrangePrimary5 {
+      background-color: $fwbOrangePrimary5;
+    }
+
+    &__fwbYellowPrimary90 {
+      background-color: $fwbYellowPrimary90;
+    }
+
+    &__fwbYellowPrimary80 {
+      background-color: $fwbYellowPrimary80;
+    }
+
+    &__fwbYellowPrimary70 {
+      background-color: $fwbYellowPrimary70;
+    }
+
+    &__fwbYellowPrimary60 {
+      background-color: $fwbYellowPrimary60;
+    }
+
+    &__fwbYellowPrimary50 {
+      background-color: $fwbYellowPrimary50;
+    }
+
+    &__fwbYellowPrimary40 {
+      background-color: $fwbYellowPrimary40;
+    }
+
+    &__fwbYellowPrimary30 {
+      background-color: $fwbYellowPrimary30;
+    }
+
+    &__fwbYellowPrimary20 {
+      background-color: $fwbYellowPrimary20;
+    }
+
+    &__fwbYellowPrimary10 {
+      background-color: $fwbYellowPrimary10;
+    }
+
+    &__fwbYellowPrimary5 {
+      background-color: $fwbYellowPrimary5;
+    }
+
+    &__fwbGreenPrimary90 {
+      background-color: $fwbGreenPrimary90;
+    }
+
+    &__fwbGreenPrimary80 {
+      background-color: $fwbGreenPrimary80;
+    }
+
+    &__fwbGreenPrimary70 {
+      background-color: $fwbGreenPrimary70;
+    }
+
+    &__fwbGreenPrimary60 {
+      background-color: $fwbGreenPrimary60;
+    }
+
+    &__fwbGreenPrimary50 {
+      background-color: $fwbGreenPrimary50;
+    }
+
+    &__fwbGreenPrimary40 {
+      background-color: $fwbGreenPrimary40;
+    }
+
+    &__fwbGreenPrimary30 {
+      background-color: $fwbGreenPrimary30;
+    }
+
+    &__fwbGreenPrimary20 {
+      background-color: $fwbGreenPrimary20;
+    }
+
+    &__fwbGreenPrimary10 {
+      background-color: $fwbGreenPrimary10;
+    }
+
+    &__fwbGreenPrimary5 {
+      background-color: $fwbGreenPrimary5;
+    }
+
+    &__fwbTealPrimary90 {
+      background-color: $fwbTealPrimary90;
+    }
+
+    &__fwbTealPrimary80 {
+      background-color: $fwbTealPrimary80;
+    }
+
+    &__fwbTealPrimary70 {
+      background-color: $fwbTealPrimary70;
+    }
+
+    &__fwbTealPrimary60 {
+      background-color: $fwbTealPrimary60;
+    }
+
+    &__fwbTealPrimary50 {
+      background-color: $fwbTealPrimary50;
+    }
+
+    &__fwbTealPrimary40 {
+      background-color: $fwbTealPrimary40;
+    }
+
+    &__fwbTealPrimary30 {
+      background-color: $fwbTealPrimary30;
+    }
+
+    &__fwbTealPrimary20 {
+      background-color: $fwbTealPrimary20;
+    }
+
+    &__fwbTealPrimary10 {
+      background-color: $fwbTealPrimary10;
+    }
+
+    &__fwbTealPrimary5 {
+      background-color: $fwbTealPrimary5;
+    }
+
+    &__fwbIndigoPrimary90 {
+      background-color: $fwbIndigoPrimary90;
+    }
+
+    &__fwbIndigoPrimary80 {
+      background-color: $fwbIndigoPrimary80;
+    }
+
+    &__fwbIndigoPrimary70 {
+      background-color: $fwbIndigoPrimary70;
+    }
+
+    &__fwbIndigoPrimary60 {
+      background-color: $fwbIndigoPrimary60;
+    }
+
+    &__fwbIndigoPrimary50 {
+      background-color: $fwbIndigoPrimary50;
+    }
+
+    &__fwbIndigoPrimary40 {
+      background-color: $fwbIndigoPrimary40;
+    }
+
+    &__fwbIndigoPrimary30 {
+      background-color: $fwbIndigoPrimary30;
+    }
+
+    &__fwbIndigoPrimary20 {
+      background-color: $fwbIndigoPrimary20;
+    }
+
+    &__fwbIndigoPrimary10 {
+      background-color: $fwbIndigoPrimary10;
+    }
+
+    &__fwbIndigoPrimary5 {
+      background-color: $fwbIndigoPrimary5;
+    }
+  }
+}
