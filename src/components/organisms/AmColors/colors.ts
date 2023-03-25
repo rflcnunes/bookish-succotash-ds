@@ -2,6 +2,7 @@ const colors = [
   { name: "Black", value: "black" },
   { name: "Blue", value: "blue" },
   { name: "Red", value: "red" },
+  { name: "White", value: "white" },
   { name: "Fwb Blue Primary 90", value: "fwbBluePrimary90" },
   { name: "Fwb Blue Primary 80", value: "fwbBluePrimary80" },
   { name: "Fwb Blue Primary 70", value: "fwbBluePrimary70" },
