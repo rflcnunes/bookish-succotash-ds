@@ -8,7 +8,8 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/preset-scss",
-    "@storybook/addon-viewport"
+    "@storybook/addon-viewport",
+    "@storybook/addon-measure"
   ],
   "framework": "@storybook/vue",
   "core": {
