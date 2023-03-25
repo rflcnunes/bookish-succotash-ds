@@ -145,6 +145,12 @@ const colors = [
   { name: "Max Error 60", value: "maxError60" },
   { name: "Max Error 40", value: "maxError40" },
   { name: "Max Error 20", value: "maxError20" },
+  { name: "Max Text 120", value: "maxText120" },
+  { name: "Max Text 100", value: "maxText100" },
+  { name: "Max Text 80", value: "maxText80" },
+  { name: "Max Text 60", value: "maxText60" },
+  { name: "Max Text 40", value: "maxText40" },
+  { name: "Max Text 20", value: "maxText20" },
 ];
 
 const colorsValues = colors.map((color) => color.value);
