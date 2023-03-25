@@ -27,6 +27,7 @@ export default {
           "maxGhost",
           "maxSecondary",
           "maxSuccess",
+          "maxError",
         ],
       },
     },

@@ -36,6 +36,7 @@ export default {
           "maxGhost",
           "maxSecondary",
           "maxSuccess",
+          "maxError",
         ].includes(value),
       default: "primary",
     },
