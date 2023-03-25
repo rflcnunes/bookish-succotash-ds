@@ -9,7 +9,8 @@ module.exports = {
     "@storybook/addon-interactions",
     "@storybook/preset-scss",
     "@storybook/addon-viewport",
-    "@storybook/addon-measure"
+    "@storybook/addon-measure",
+    "@storybook/addon-outline"
   ],
   "framework": "@storybook/vue",
   "core": {
