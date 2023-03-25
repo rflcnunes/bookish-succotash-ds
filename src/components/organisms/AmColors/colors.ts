@@ -114,6 +114,12 @@ const colors = [
   { name: "Max Blue Secondary 60", value: "maxSecondaryBlue60" },
   { name: "Max Blue Secondary 40", value: "maxSecondaryBlue40" },
   { name: "Max Blue Secondary 20", value: "maxSecondaryBlue20" },
+  { name: "Max Blue Tertiary 120", value: "maxTertiaryBlue120" },
+  { name: "Max Blue Tertiary 100", value: "maxTertiaryBlue100" },
+  { name: "Max Blue Tertiary 80", value: "maxTertiaryBlue80" },
+  { name: "Max Blue Tertiary 60", value: "maxTertiaryBlue60" },
+  { name: "Max Blue Tertiary 40", value: "maxTertiaryBlue40" },
+  { name: "Max Blue Tertiary 20", value: "maxTertiaryBlue20" },
 ];
 
 const colorsValues = colors.map((color) => color.value);
