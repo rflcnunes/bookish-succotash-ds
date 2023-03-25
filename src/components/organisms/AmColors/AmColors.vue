@@ -1,18 +1,11 @@
 <template>
   <div class="am-colors">
-    <div class="am-colors__item" v-for="color in colors" :key="color.value">
+    <div class="am-colors__item">
       <div
         class="am-colors__item__color"
-        :class="`am-colors__item__color__${color.value}`"
+        :class="`am-colors__item__color__${color}`"
       ></div>
-      <div class="am-colors__item__description">
-        <div class="am-colors__item__description__name">
-          Name: {{ color.name }}
-        </div>
-        <div class="am-colors__item__description__value">
-          Value: {{ color.value }}
-        </div>
-      </div>
+      <div class="am-colors__item__description">{{ color }}</div>
     </div>
   </div>
 </template>
@@ -22,10 +15,12 @@ import { colors } from "./colors";
 
 export default {
   name: "AmColors",
-  data() {
-    return {
-      colors: colors,
-    };
+  props: {
+    color: {
+      type: String,
+      default: "maxPrimaryPurple100",
+      validator: (value) => colors.map((color) => color.value).includes(value),
+    },
   },
 };
 </script>

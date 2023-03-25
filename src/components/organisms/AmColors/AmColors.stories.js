@@ -1,19 +1,23 @@
 import AmColors from "./AmColors";
+import { colors } from "./colors";
 
 export default {
   title: "Organisms/AmColors",
   component: AmColors,
   argTypes: {
-    colors: {
-      control: { type: "object" },
+    color: {
+      control: { type: "select", options: colors.map((color) => color.value) },
     },
   },
 };
 
-export const Default = (args, { argTypes }) => ({
-  props: Object.keys(argTypes),
+const Template = (args, { argTypes }) => ({
   components: { AmColors },
-  template: `
-    <AmColors :colors="colors" />
-  `,
+  props: Object.keys(argTypes),
+  template: '<AmColors :color="color" />',
 });
+
+export const Default = Template.bind({});
+Default.args = {
+  color: "maxPrimaryPurple100",
+};
