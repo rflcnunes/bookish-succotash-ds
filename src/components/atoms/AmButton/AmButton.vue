@@ -34,6 +34,7 @@ export default {
           "maxPrimary",
           "maxOutlined",
           "maxGhost",
+          "maxSecondary",
         ].includes(value),
       default: "primary",
     },

@@ -25,6 +25,7 @@ export default {
           "maxPrimary",
           "maxOutlined",
           "maxGhost",
+          "maxSecondary",
         ],
       },
     },

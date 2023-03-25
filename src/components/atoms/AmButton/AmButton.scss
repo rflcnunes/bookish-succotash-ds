@@ -80,4 +80,28 @@
       cursor: not-allowed;
     }
   }
+
+  &--maxSecondary {
+    background-color: $maxSystemBlue100;
+    color: $white;
+    padding: 8px 12px 8px 12px;
+    width: 121px;
+    height: 34px;
+    border-radius: 8px;
+    font-weight: 500;
+
+    &:hover {
+      background-color: $maxSystemBlue120;
+    }
+
+    &:active {
+      background-color: $maxSystemBlue80;
+    }
+
+    &:disabled {
+      background-color: $maxSystemGray60;
+      color: $white;
+      cursor: not-allowed;
+    }
+  }
 }
