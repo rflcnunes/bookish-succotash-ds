@@ -4,19 +4,46 @@
   cursor: pointer;
 }
 
-.am-button--small {
+.am-button--tiny {
   font-size: 12px;
-  padding: 10px 16px;
+  padding: 4px 12px;
+  min-width: 86px;
+  max-height: 24px;
+}
+
+.am-button--small {
+  font-size: 14px;
+  padding: 6px 12px;
+  min-width: 105px;
+  max-height: 28px;
 }
 
 .am-button--medium {
   font-size: 14px;
-  padding: 11px 20px;
+  padding: 8px 12px;
+  min-width: 121px;
+  max-height: 34px;
 }
 
 .am-button--large {
-  font-size: 16px;
+  font-size: 14px;
+  padding: 8px 16px;
+  min-width: 113px;
+  max-height: 40px;
+}
+
+.am-button--xlarge {
+  font-size: 14px;
   padding: 12px 24px;
+  min-width: 119px;
+  max-height: 48px;
+}
+
+.am-button--xxlarge {
+  font-size: 18px;
+  padding: 16px 24px;
+  min-width: 119px;
+  max-height: 48px;
 }
 
 .am-button--primary {
@@ -123,17 +150,17 @@
 }
 
 .am-button--pure-yellow {
-  background-color: #F8C104;
+  background-color: #f8c104;
   color: #000000;
 }
 
 .am-button--pure-yellow:hover {
-  background-color: #F7D038;
+  background-color: #f7d038;
   color: #000000;
 }
 
 .am-button--pure-yellow:active {
-  background-color: #DAA520;
+  background-color: #daa520;
   color: #000000;
 }
 

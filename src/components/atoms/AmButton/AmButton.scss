@@ -1,14 +1,12 @@
 @import "../../../styles/_variables.scss";
 
 .am-button {
+  border-radius: 8px;
+  font-weight: 500;
+
   &--maxPrimary {
     background-color: $maxPrimaryPurple100;
     color: $white;
-    padding: 8px 12px 8px 12px;
-    width: 121px;
-    height: 34px;
-    border-radius: 8px;
-    font-weight: 500;
 
     &:hover {
       background-color: $maxPrimaryPurple120;
@@ -29,11 +27,6 @@
     background-color: transparent;
     border: 1px solid $maxPrimaryPurple100;
     color: $maxPrimaryPurple100;
-    padding: 8px 12px 8px 12px;
-    width: 121px;
-    height: 34px;
-    border-radius: 8px;
-    font-weight: 500;
 
     &:hover {
       background-color: transparent;
@@ -58,11 +51,6 @@
   &--maxGhost {
     background-color: transparent;
     color: $maxPrimaryPurple100;
-    padding: 8px 12px 8px 12px;
-    width: 121px;
-    height: 34px;
-    border-radius: 8px;
-    font-weight: 500;
 
     &:hover {
       background-color: $maxPrimaryPurple20;
@@ -84,11 +72,6 @@
   &--maxSecondary {
     background-color: $maxSystemBlue100;
     color: $white;
-    padding: 8px 12px 8px 12px;
-    width: 121px;
-    height: 34px;
-    border-radius: 8px;
-    font-weight: 500;
 
     &:hover {
       background-color: $maxSystemBlue120;
@@ -108,11 +91,6 @@
   &--maxSuccess {
     background-color: $maxSuccess100;
     color: $white;
-    padding: 8px 12px 8px 12px;
-    width: 121px;
-    height: 34px;
-    border-radius: 8px;
-    font-weight: 500;
 
     &:hover {
       background-color: $maxSuccess120;
@@ -132,11 +110,6 @@
   &--maxError {
     background-color: $maxError100;
     color: $white;
-    padding: 8px 12px 8px 12px;
-    width: 121px;
-    height: 34px;
-    border-radius: 8px;
-    font-weight: 500;
 
     &:hover {
       background-color: $maxError120;

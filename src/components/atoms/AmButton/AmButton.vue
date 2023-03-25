@@ -15,7 +15,10 @@ export default {
   props: {
     size: {
       type: String,
-      validator: (value) => ["small", "medium", "large"].includes(value),
+      validator: (value) =>
+        ["tiny", "small", "medium", "large", "xlarge", "xxlarge"].includes(
+          value
+        ),
       default: "medium",
     },
     variant: {

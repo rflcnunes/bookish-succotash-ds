@@ -7,7 +7,10 @@ export default {
   component: AmButton,
   argTypes: {
     size: {
-      control: { type: "select", options: ["small", "medium", "large"] },
+      control: {
+        type: "radio",
+        options: ["tiny", "small", "medium", "large", "xlarge", "xxlarge"],
+      },
     },
     variant: {
       control: {
