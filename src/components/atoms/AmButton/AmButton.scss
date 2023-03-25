@@ -24,4 +24,34 @@
       cursor: not-allowed;
     }
   }
+
+  &--maxOutlined {
+    background-color: transparent;
+    border: 1px solid $maxPrimaryPurple100;
+    color: $maxPrimaryPurple100;
+    padding: 8px 12px 8px 12px;
+    width: 121px;
+    height: 34px;
+    border-radius: 8px;
+    font-weight: 500;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $maxPrimaryPurple120;
+      color: $maxPrimaryPurple120;
+    }
+
+    &:active {
+      background-color: transparent;
+      border: 1px solid $maxPrimaryPurple80;
+      color: $maxPrimaryPurple80;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      border: 1px solid $maxSystemGray60;
+      color: $maxSystemGray60;
+      cursor: not-allowed;
+    }
+  }
 }

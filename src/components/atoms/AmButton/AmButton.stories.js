@@ -23,6 +23,7 @@ export default {
           "outlined-yellow",
           "pure-yellow",
           "maxPrimary",
+          "maxOutlined",
         ],
       },
     },

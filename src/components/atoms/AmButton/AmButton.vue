@@ -32,6 +32,7 @@ export default {
           "outlined-yellow",
           "pure-yellow",
           "maxPrimary",
+          "maxOutlined",
         ].includes(value),
       default: "primary",
     },
