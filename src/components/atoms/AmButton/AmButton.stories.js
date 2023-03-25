@@ -53,7 +53,7 @@ const Template = (args, { argTypes }) => ({
 
 export const Primary = Template.bind({});
 Primary.args = {
-  variant: "primary",
+  variant: "maxPrimary",
   label: "Button",
   size: "medium",
 };
