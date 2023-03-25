@@ -24,6 +24,7 @@ export default {
           "pure-yellow",
           "maxPrimary",
           "maxOutlined",
+          "maxGhost",
         ],
       },
     },

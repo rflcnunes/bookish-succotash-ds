@@ -54,4 +54,30 @@
       cursor: not-allowed;
     }
   }
+
+  &--maxGhost {
+    background-color: transparent;
+    color: $maxPrimaryPurple100;
+    padding: 8px 12px 8px 12px;
+    width: 121px;
+    height: 34px;
+    border-radius: 8px;
+    font-weight: 500;
+
+    &:hover {
+      background-color: $maxPrimaryPurple20;
+      color: $maxPrimaryPurple120;
+    }
+
+    &:active {
+      background-color: $maxPrimaryPurple20;
+      color: $maxPrimaryPurple80;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      color: $maxSystemGray60;
+      cursor: not-allowed;
+    }
+  }
 }
