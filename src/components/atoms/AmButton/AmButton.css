@@ -2,6 +2,25 @@
   line-height: 1;
   border: 0;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.withLeftIcon {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.withRightIcon {
+  display: flex;
+  flex-direction: row-reverse;
+  grid-gap: 8px;
+  align-items: center;
+  justify-content: center;
 }
 
 .am-button--tiny {

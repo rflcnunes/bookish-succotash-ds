@@ -84,8 +84,29 @@ Primary.parameters = {
   },
 };
 
-export const Dashed = Template.bind({});
+export const WithLeftIcon = Template.bind({});
+WithLeftIcon.args = {
+  variant: "maxSecondary",
+  label: "Button",
+  icon: {
+    name: "close",
+    size: "small",
+    position: "withLeftIcon",
+  },
+};
 
+export const WithRightIcon = Template.bind({});
+WithRightIcon.args = {
+  variant: "maxSecondary",
+  label: "Button",
+  icon: {
+    name: "close",
+    size: "small",
+    position: "withRightIcon",
+  },
+};
+
+export const Dashed = Template.bind({});
 Dashed.args = {
   variant: "dashed",
   label: "Button Dashed",
@@ -131,4 +152,36 @@ export const PureYellow = Template.bind({});
 PureYellow.args = {
   variant: "pure-yellow",
   label: "Button Pure Yellow",
+};
+
+export const MaxPrimary = Template.bind({});
+MaxPrimary.args = {
+  variant: "maxPrimary",
+  label: "Button Max Primary",
+};
+
+export const MaxOutlined = Template.bind({});
+MaxOutlined.args = {
+  variant: "maxOutlined",
+  label: "Button Max Outlined",
+};
+
+export const MaxGhost = Template.bind({});
+MaxGhost.args = {
+  variant: "maxGhost",
+  label: "Button Max Ghost",
+};
+
+export const MaxGhostDisabled = Template.bind({});
+MaxGhostDisabled.args = {
+  variant: "maxGhost",
+  label: "Button Max Ghost",
+  disabled: true,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  variant: "maxPrimary",
+  label: "Button Max Primary",
+  disabled: true,
 };

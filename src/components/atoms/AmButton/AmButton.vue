@@ -6,18 +6,23 @@
     :disabled="disabled"
     :to="to"
   >
-    {{ label }}
+    <div :class="icon.position ? icon.position : 'withLeftIcon'" v-if="icon">
+      <AmIcon :icon="icon.name" />
+      <AmTypography :label="label" variant="regular" color="white" />
+    </div>
+    <AmTypography v-else :label="label" variant="regular" color="white" />
   </component>
 </template>
 
 <script>
+import AmIcon from "../AmIcon/AmIcon.vue";
+import AmTypography from "../AmTypography/AmTypography.vue";
 import "./AmButton.css";
 import "./AmButton.scss";
 import { reactive, computed } from "vue";
 
 export default {
   name: "AmButton",
-
   props: {
     size: {
       type: String,
@@ -61,8 +66,11 @@ export default {
       type: String,
       default: "",
     },
+    icon: {
+      type: Object,
+      default: null,
+    },
   },
-
   setup(props, { emit }) {
     const state = reactive({
       isClicked: false,
@@ -85,5 +93,6 @@ export default {
       onClick,
     };
   },
+  components: { AmIcon, AmTypography },
 };
 </script>

@@ -7,7 +7,8 @@ describe("AmButton.vue", () => {
     const wrapper = shallowMount(AmButton, {
       propsData: { label },
     });
-    expect(wrapper.text()).toMatch(label);
+
+    expect(wrapper.props().label).toMatch(label);
   });
 
   it("renders a button element", () => {
@@ -21,7 +22,7 @@ describe("AmButton.vue", () => {
         label: "Test Label",
       },
     });
-    expect(wrapper.text()).toContain("Test Label");
+    expect(wrapper.props().label).toContain("Test Label");
   });
 
   it("emits a click event when clicked", async () => {

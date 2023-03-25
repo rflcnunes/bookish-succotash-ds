@@ -29,14 +29,15 @@ export default {
     },
     weight: {
       type: String,
-      default: "normal",
+      default: "medium",
       validator: (value) =>
         ["normal", "medium", "bold", "xbold"].includes(value),
     },
     color: {
       type: String,
       default: "black",
-      validator: (value) => ["black", "blue", "red", "gray"].includes(value),
+      validator: (value) =>
+        ["black", "blue", "red", "gray", "white"].includes(value),
     },
     label: {
       type: String,
