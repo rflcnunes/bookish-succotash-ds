@@ -108,6 +108,12 @@ const colors = [
   { name: "Max Purple Primary 60", value: "maxPrimaryPurple60" },
   { name: "Max Purple Primary 40", value: "maxPrimaryPurple40" },
   { name: "Max Purple Primary 20", value: "maxPrimaryPurple20" },
+  { name: "Max Blue Primary 120", value: "maxPrimaryBlue120" },
+  { name: "Max Blue Primary 100", value: "maxPrimaryBlue100" },
+  { name: "Max Blue Primary 80", value: "maxPrimaryBlue80" },
+  { name: "Max Blue Primary 60", value: "maxPrimaryBlue60" },
+  { name: "Max Blue Primary 40", value: "maxPrimaryBlue40" },
+  { name: "Max Blue Primary 20", value: "maxPrimaryBlue20" },
 ];
 
 const colorsValues = colors.map((color) => color.value);
