@@ -133,6 +133,12 @@ const colors = [
   { name: "Max Success 60", value: "maxSuccess60" },
   { name: "Max Success 40", value: "maxSuccess40" },
   { name: "Max Success 20", value: "maxSuccess20" },
+  { name: "Max Warning 120", value: "maxWarning120" },
+  { name: "Max Warning 100", value: "maxWarning100" },
+  { name: "Max Warning 80", value: "maxWarning80" },
+  { name: "Max Warning 60", value: "maxWarning60" },
+  { name: "Max Warning 40", value: "maxWarning40" },
+  { name: "Max Warning 20", value: "maxWarning20" },
 ];
 
 const colorsValues = colors.map((color) => color.value);
