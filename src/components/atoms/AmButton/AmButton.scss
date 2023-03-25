@@ -1,0 +1,21 @@
+@import "../../../styles/_variables.scss";
+
+.am-button {
+  &--maxPrimary {
+    background-color: $maxPrimaryPurple100;
+    color: $white;
+    padding: 8px 12px 8px 12px;
+    width: 121px;
+    height: 34px;
+    border-radius: 8px;
+    font-weight: 500;
+
+    &:hover {
+      background-color: $maxPrimaryPurple120;
+    }
+
+    &:active {
+      background-color: $maxPrimaryPurple80;
+    }
+  }
+}
