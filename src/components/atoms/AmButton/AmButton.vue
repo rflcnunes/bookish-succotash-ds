@@ -1,11 +1,12 @@
 <template>
-  <button :class="buttonClasses" @click="onClick">
+  <button :class="buttonClasses" @click="onClick" :disabled="disabled">
     {{ label }}
   </button>
 </template>
 
 <script>
 import "./AmButton.css";
+import "./AmButton.scss";
 import { reactive, computed } from "vue";
 
 export default {
@@ -30,12 +31,17 @@ export default {
           "yellow",
           "outlined-yellow",
           "pure-yellow",
+          "maxPrimary",
         ].includes(value),
       default: "primary",
     },
     label: {
       type: String,
       default: "Button",
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
 

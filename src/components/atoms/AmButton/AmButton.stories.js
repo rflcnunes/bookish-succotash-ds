@@ -22,6 +22,7 @@ export default {
           "yellow",
           "outlined-yellow",
           "pure-yellow",
+          "maxPrimary",
         ],
       },
     },
@@ -30,6 +31,9 @@ export default {
     },
     label: {
       control: { type: "text" },
+    },
+    disabled: {
+      control: { type: "boolean" },
     },
     onClick: {},
   },

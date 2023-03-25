@@ -17,5 +17,11 @@
     &:active {
       background-color: $maxPrimaryPurple80;
     }
+
+    &:disabled {
+      background-color: $maxSystemGray60;
+      color: $white;
+      cursor: not-allowed;
+    }
   }
 }
