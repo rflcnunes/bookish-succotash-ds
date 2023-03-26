@@ -40,7 +40,9 @@ The Octopus Design System library includes a range of Vue.js components that can
 <br>
 
 ``AmButton``: A button with options for customizing size, color, and icon.
+
 ``AmIcon``: An icon with options for customizing size, color, and name.
+
 ``AmTypography``: Text with options for customizing size, color, and variation.
 
 <br>
