@@ -1,45 +1,48 @@
 <template>
-  <table>
-    <thead>
-      <tr>
-        <th
-          v-for="column in columns"
-          :key="column.key"
-          @click="sort(column.key)"
-        >
-          <div class="sort_row">
-            <AmTypography
-              variant="slab"
-              size="md"
-              :label="column.label"
-              class="sort"
-            />
-            <AmIcon
-              class="sort-icon"
-              v-if="sortColumn === column.key"
-              :icon="
-                sortDirection === 'asc'
-                  ? 'keyboard_arrow_up'
-                  : 'keyboard_arrow_down'
-              "
-            />
-          </div>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="item in items" :key="item.id">
-        <td v-for="column in columns" :key="column.key">
-          <div>
-            {{ item[column.key] }}
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <div :class="variant">
+    <table>
+      <thead>
+        <tr>
+          <th
+            v-for="column in columns"
+            :key="column.key"
+            @click="sort(column.key)"
+          >
+            <div class="sort_row">
+              <AmTypography
+                variant="slab"
+                size="md"
+                :label="column.label"
+                class="sort"
+              />
+              <AmIcon
+                class="sort-icon"
+                v-if="sortColumn === column.key"
+                :icon="
+                  sortDirection === 'asc'
+                    ? 'keyboard_arrow_up'
+                    : 'keyboard_arrow_down'
+                "
+              />
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="item in items" :key="item.id">
+          <td v-for="column in columns" :key="column.key">
+            <div>
+              {{ item[column.key] }}
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
 <script>
+import "./AmTable.scss";
 import AmIcon from "../../atoms/AmIcon/AmIcon.vue";
 import AmTypography from "../../atoms/AmTypography/AmTypography.vue";
 
@@ -59,6 +62,10 @@ export default {
       type: Array,
       required: true,
       default: () => [],
+    },
+    variant: {
+      type: String,
+      default: "default",
     },
   },
   data() {
@@ -99,33 +106,3 @@ export default {
   },
 };
 </script>
-
-<style>
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  padding: 8px;
-  text-align: left;
-}
-
-th {
-  cursor: pointer;
-}
-
-th span {
-  margin-left: 5px;
-}
-
-tr th {
-  border-bottom: 2px solid rgba(107, 119, 140, 0.3);
-  color: #6b778c;
-}
-
-.sort_row {
-  display: flex;
-}
-</style>
