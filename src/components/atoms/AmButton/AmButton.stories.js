@@ -9,7 +9,20 @@ export default {
     size: {
       control: {
         type: "radio",
-        options: ["tiny", "small", "medium", "large", "xlarge", "xxlarge"],
+        options: [
+          "tiny",
+          "small",
+          "medium",
+          "large",
+          "xlarge",
+          "xxlarge",
+          "iconTiny",
+          "iconSmall",
+          "iconMedium",
+          "iconLarge",
+          "xIconLarge",
+          "xxIconLarge",
+        ],
       },
     },
     variant: {
@@ -84,6 +97,95 @@ Primary.parameters = {
   },
 };
 
+export const OnlyIcon = Template.bind({});
+OnlyIcon.args = {
+  variant: "maxPrimary",
+  icon: {
+    name: "close",
+    size: "small",
+    position: "withLeftIcon",
+  },
+  size: "iconTiny",
+};
+
+export const OnlyIconSmall = Template.bind({});
+OnlyIconSmall.args = {
+  variant: "maxPrimary",
+  icon: {
+    name: "close",
+    size: "small",
+    position: "withLeftIcon",
+  },
+  size: "iconSmall",
+};
+
+export const OnlyIconMedium = Template.bind({});
+OnlyIconMedium.args = {
+  variant: "maxPrimary",
+  icon: {
+    name: "close",
+    size: "small",
+    position: "withLeftIcon",
+  },
+  size: "iconMedium",
+};
+
+export const OnlyIconMediumOutlined = Template.bind({});
+OnlyIconMediumOutlined.args = {
+  variant: "maxOutlined",
+  icon: {
+    name: "close",
+    size: "small",
+    position: "withLeftIcon",
+  },
+  size: "iconMedium",
+};
+
+export const OnlyIconMediumDisabled = Template.bind({});
+OnlyIconMediumDisabled.args = {
+  variant: "maxPrimary",
+  disabled: true,
+  icon: {
+    name: "close",
+    size: "small",
+    position: "withLeftIcon",
+  },
+  size: "iconMedium",
+};
+
+export const OnlyIconLarge = Template.bind({});
+OnlyIconLarge.args = {
+  variant: "maxPrimary",
+  icon: {
+    name: "close",
+    size: "small",
+    position: "withLeftIcon",
+  },
+  size: "iconLarge",
+};
+
+export const OnlyIconXLarge = Template.bind({});
+OnlyIconXLarge.args = {
+  variant: "maxPrimary",
+  icon: {
+    name: "close",
+    size: "small",
+    position: "withLeftIcon",
+  },
+  size: "xIconLarge",
+};
+
+export const OnlyIconXXLarge = Template.bind({});
+OnlyIconXXLarge.args = {
+  variant: "maxPrimary",
+  icon: {
+    name: "close",
+    size: "small",
+    position: "withLeftIcon",
+  },
+  size: "xxIconLarge",
+};
+
 export const WithLeftIcon = Template.bind({});
 WithLeftIcon.args = {
   variant: "maxSecondary",
@@ -93,6 +195,7 @@ WithLeftIcon.args = {
     size: "small",
     position: "withLeftIcon",
   },
+  size: "medium",
 };
 
 export const WithRightIcon = Template.bind({});
@@ -104,72 +207,84 @@ WithRightIcon.args = {
     size: "small",
     position: "withRightIcon",
   },
+  size: "medium",
 };
 
 export const Dashed = Template.bind({});
 Dashed.args = {
   variant: "dashed",
   label: "Button Dashed",
+  size: "medium",
 };
 
 export const Purple = Template.bind({});
 Purple.args = {
   variant: "purple",
   label: "Button Purple",
+  size: "medium",
 };
 
 export const Error = Template.bind({});
 Error.args = {
   variant: "error",
   label: "Button Error",
+  size: "medium",
 };
 
 export const Outlined = Template.bind({});
 Outlined.args = {
   variant: "outlined",
   label: "Button Outlined",
+  size: "medium",
 };
 
 export const Green = Template.bind({});
 Green.args = {
   variant: "green",
   label: "Button Green",
+  size: "medium",
 };
 
 export const Yellow = Template.bind({});
 Yellow.args = {
   variant: "yellow",
   label: "Button Yellow",
+  size: "medium",
 };
 
 export const OutlinedYellow = Template.bind({});
 OutlinedYellow.args = {
   variant: "outlined-yellow",
   label: "Button Yellow",
+  size: "medium",
 };
 
 export const PureYellow = Template.bind({});
 PureYellow.args = {
   variant: "pure-yellow",
   label: "Button Pure Yellow",
+  size: "medium",
 };
 
 export const MaxPrimary = Template.bind({});
 MaxPrimary.args = {
   variant: "maxPrimary",
   label: "Button Max Primary",
+  size: "medium",
 };
 
 export const MaxOutlined = Template.bind({});
 MaxOutlined.args = {
   variant: "maxOutlined",
   label: "Button Max Outlined",
+  size: "medium",
 };
 
 export const MaxGhost = Template.bind({});
 MaxGhost.args = {
   variant: "maxGhost",
   label: "Button Max Ghost",
+  size: "medium",
 };
 
 export const MaxGhostDisabled = Template.bind({});
@@ -177,6 +292,7 @@ MaxGhostDisabled.args = {
   variant: "maxGhost",
   label: "Button Max Ghost",
   disabled: true,
+  size: "medium",
 };
 
 export const Disabled = Template.bind({});
@@ -184,4 +300,5 @@ Disabled.args = {
   variant: "maxPrimary",
   label: "Button Max Primary",
   disabled: true,
+  size: "medium",
 };

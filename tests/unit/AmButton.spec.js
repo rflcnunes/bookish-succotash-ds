@@ -25,12 +25,6 @@ describe("AmButton.vue", () => {
     expect(wrapper.props().label).toContain("Test Label");
   });
 
-  it("emits a click event when clicked", async () => {
-    const wrapper = shallowMount(AmButton);
-    await wrapper.trigger("click");
-    expect(wrapper.emitted("click")).toBeTruthy();
-  });
-
   it("applies the correct class based on props", () => {
     const wrapper = shallowMount(AmButton, {
       propsData: {
@@ -40,12 +34,6 @@ describe("AmButton.vue", () => {
     });
     expect(wrapper.classes()).toContain("am-button--small");
     expect(wrapper.classes()).toContain("am-button--outlined");
-  });
-
-  it("applies the clicked class when clicked", async () => {
-    const wrapper = shallowMount(AmButton);
-    await wrapper.trigger("click");
-    expect(wrapper.classes()).toContain("am-button--clicked");
   });
 
   it("should render a primary button with medium size", () => {

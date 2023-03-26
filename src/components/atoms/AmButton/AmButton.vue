@@ -6,7 +6,11 @@
     :disabled="disabled"
     :to="to"
   >
-    <div :class="icon.position ? icon.position : 'withLeftIcon'" v-if="icon">
+    <AmIcon v-if="!label && icon" :icon="icon.name" />
+    <div
+      :class="icon.position ? icon.position : 'withLeftIcon'"
+      v-else-if="label && icon"
+    >
       <AmIcon :icon="icon.name" />
       <AmTypography :label="label" variant="regular" color="white" />
     </div>
@@ -19,19 +23,11 @@ import AmIcon from "../AmIcon/AmIcon.vue";
 import AmTypography from "../AmTypography/AmTypography.vue";
 import "./AmButton.css";
 import "./AmButton.scss";
-import { reactive, computed } from "vue";
+import { reactive } from "vue";
 
 export default {
   name: "AmButton",
   props: {
-    size: {
-      type: String,
-      validator: (value) =>
-        ["tiny", "small", "medium", "large", "xlarge", "xxlarge"].includes(
-          value
-        ),
-      default: "medium",
-    },
     variant: {
       type: String,
       validator: (value) =>
@@ -56,7 +52,7 @@ export default {
     },
     label: {
       type: String,
-      default: "Button",
+      default: "",
     },
     disabled: {
       type: Boolean,
@@ -70,18 +66,30 @@ export default {
       type: Object,
       default: null,
     },
+    size: {
+      type: String,
+      validator: (value) =>
+        [
+          "tiny",
+          "small",
+          "medium",
+          "large",
+          "xlarge",
+          "xxlarge",
+          "iconTiny",
+          "iconSmall",
+          "iconMedium",
+          "iconLarge",
+          "xIconLarge",
+          "xxIconLarge",
+        ].includes(value),
+      default: "medium",
+    },
   },
   setup(props, { emit }) {
     const state = reactive({
       isClicked: false,
     });
-
-    const buttonClasses = computed(() => [
-      "am-button",
-      `am-button--${props.variant}`,
-      `am-button--${props.size}`,
-      { "am-button--clicked": state.isClicked },
-    ]);
 
     function onClick() {
       state.isClicked = true;
@@ -89,10 +97,21 @@ export default {
     }
 
     return {
-      buttonClasses,
       onClick,
     };
   },
   components: { AmIcon, AmTypography },
+  computed: {
+    buttonClasses() {
+      return [
+        "am-button",
+        `am-button--${this.variant}`,
+        `am-button--${this.size}`,
+        { "am-button--clicked": this.isClicked },
+        { "am-button--icon": this.icon && this.label },
+        { "am-button--icon-only": this.icon && !this.label },
+      ];
+    },
+  },
 };
 </script>

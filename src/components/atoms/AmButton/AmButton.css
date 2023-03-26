@@ -7,6 +7,20 @@
   justify-content: center;
 }
 
+.am-button--icon {
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.am-button--icon-only {
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .withLeftIcon {
   display: grid;
   grid-auto-flow: column;
@@ -26,8 +40,44 @@
 .am-button--tiny {
   font-size: 12px;
   padding: 4px 12px;
-  min-width: 86px;
-  max-height: 24px;
+  width: 86px;
+  height: 24px;
+}
+
+.am-button--iconTiny {
+  padding: 5px;
+  width: 24px;
+  height: 24px;
+}
+
+.am-button--iconSmall {
+  padding: 5px;
+  width: 28px;
+  height: 28px;
+}
+
+.am-button--iconMedium {
+  padding: 5px;
+  width: 34px;
+  height: 34px;
+}
+
+.am-button--iconLarge {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+}
+
+.am-button--xIconLarge {
+  padding: 5px;
+  width: 48px;
+  height: 48px;
+}
+
+.am-button--xxIconLarge {
+  padding: 5px;
+  width: 56px;
+  height: 56px;
 }
 
 .am-button--small {
