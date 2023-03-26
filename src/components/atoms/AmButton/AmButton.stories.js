@@ -9,20 +9,7 @@ export default {
     size: {
       control: {
         type: "radio",
-        options: [
-          "tiny",
-          "small",
-          "medium",
-          "large",
-          "xlarge",
-          "xxlarge",
-          "iconTiny",
-          "iconSmall",
-          "iconMedium",
-          "iconLarge",
-          "xIconLarge",
-          "xxIconLarge",
-        ],
+        options: ["tiny", "small", "medium", "large", "xlarge", "xxlarge"],
       },
     },
     variant: {
