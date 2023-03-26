@@ -1,7 +1,7 @@
 {
   "name": "octopus-design-system",
   "version": "0.1.0",
-  "private": true,
+  "description": "Octopus Design System, a Vue.js 2 component library",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -16,6 +16,7 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "currency.js": "^2.0.4",
+    "material-icons": "^1.13.3",
     "mobx": "^6.8.0",
     "pretty": "^2.0.0",
     "vue": "^2.6.14",
