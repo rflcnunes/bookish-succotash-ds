@@ -35,6 +35,17 @@ The component AmTag has the following props:
   {Template.bind({})}
 </Story>
 
+### Ghost Tag
+<Story
+  name="Ghost Tag"
+  args={{
+    text: "Status",
+    variant: "ghostPurple",
+  }}
+>
+  {Template.bind({})}
+</Story>
+
 ### Dark Gray
 <Story
   name="Dark Gray"
@@ -213,6 +224,32 @@ The component AmTag has the following props:
     text: "Status",
     variant: "statusGray",
     isStatusTag: true
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+## With Icon
+
+### With Icon in Left
+<Story
+  name="With Icon in Left"
+  args={{
+    text: "Label",
+    icon: "image",
+    positionIcon: "left"
+  }}
+>
+  {Template.bind({})}
+</Story>
+
+### With Icon in Right
+<Story
+  name="With Icon in Right"
+  args={{
+    text: "Label",
+    icon: "image",
+    positionIcon: "right"
   }}
 >
   {Template.bind({})}

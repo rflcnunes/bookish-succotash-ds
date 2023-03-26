@@ -34,6 +34,9 @@ export default {
     isStatusTag: {
       control: { type: "boolean" },
     },
+    positionIcon: {
+      control: { type: "radio", options: ["left", "right"] },
+    },
   },
 };
 

@@ -1,12 +1,27 @@
 <template>
-  <span :style="tagStyle" :class="!isStatusTag ? 'am-tag' : 'am-status-tag'">{{
-    text
-  }}</span>
+  <span
+    :style="tagStyle"
+    :class="[
+      !isStatusTag ? 'am-tag' : 'am-status-tag',
+      {
+        'with-icon': icon && positionIcon === 'left',
+        'with-reverse-icon': icon && positionIcon === 'right',
+      },
+    ]"
+  >
+    <AmIcon v-if="icon" :icon="icon" size="16px" />
+    {{ text }}
+  </span>
 </template>
 
 <script>
+import AmIcon from "../../atoms/AmIcon/AmIcon.vue";
+
 export default {
   name: "AmTag",
+  components: {
+    AmIcon,
+  },
   props: {
     text: {
       type: String,
@@ -19,6 +34,14 @@ export default {
     isStatusTag: {
       type: Boolean,
       default: false,
+    },
+    icon: {
+      type: String,
+      default: "",
+    },
+    positionIcon: {
+      type: String,
+      default: "left",
     },
   },
   computed: {
@@ -41,6 +64,7 @@ export default {
         statusRed: { background: "F8DBD7", fontColor: "B84232" },
         statusGreen: { background: "D5F0E4", fontColor: "017E46" },
         statusGray: { background: "D6D6D6", fontColor: "5C5C5C" },
+        ghostPurple: { background: "EBE1FE", fontColor: "7B54C7" },
       };
       const { background, fontColor } = variants[this.variant];
       return {
@@ -52,13 +76,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .am-tag {
   padding: 5px 18px;
   border-radius: 8px;
   font-size: 14px;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
+  width: fit-content;
 }
 
 .am-status-tag {
@@ -67,5 +92,21 @@ export default {
   font-size: 14px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
+}
+
+.with-icon {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-auto-flow: column;
+  grid-gap: 5px;
+}
+
+.with-reverse-icon {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 5px;
 }
 </style>
