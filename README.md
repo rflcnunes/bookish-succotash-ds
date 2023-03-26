@@ -45,6 +45,11 @@ The Octopus Design System library includes a range of Vue.js components that can
 
 ``AmTypography``: Text with options for customizing size, color, and variation.
 
+
+<br>
+
+And many others...
+
 <br>
 
 ## Contributing
