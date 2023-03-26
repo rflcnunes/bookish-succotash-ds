@@ -62,8 +62,8 @@ export default {
 }
 
 .am-status-tag {
-  padding: 5px 18px;
-  border-radius: 8px 15px 15px 8px;
+  padding: 8px 12px;
+  border-radius: 8px 18px 18px 8px;
   font-size: 14px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
