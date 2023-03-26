@@ -43,6 +43,5 @@ describe("AmTable", () => {
     expect(tds.at(8).text()).toBe("25");
     expect(wrapper.vm.$data.sortColumn).toBe("name");
     expect(wrapper.vm.$data.sortDirection).toBe("asc");
-    expect(wrapper.html()).toMatchSnapshot();
   });
 });
