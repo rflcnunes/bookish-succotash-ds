@@ -6,7 +6,7 @@
           <th
             v-for="column in columns"
             :key="column.key"
-            @click="sort(column.key)"
+            @click="column.isSorting && sort(column.key)"
           >
             <div class="sort_row">
               <AmTypography
@@ -84,7 +84,7 @@ export default {
       return this.header.map((column) => ({
         ...column,
         key: column.key || column.label.toLowerCase().replace(" ", "_"),
-        filtered: column.key === this.sortColumn,
+        filtered: column.isSorting && column.key === this.sortColumn,
       }));
     },
     items() {

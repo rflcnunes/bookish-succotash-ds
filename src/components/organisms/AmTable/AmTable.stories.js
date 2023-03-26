@@ -18,7 +18,7 @@ export const Default = Template.bind({});
 Default.args = {
   header: [
     { label: "ID", key: "id" },
-    { label: "Nome", key: "name" },
+    { label: "Nome", key: "name", isSorting: true },
     { label: "E-mail", key: "email" },
     { label: "Telefone", key: "phone" },
   ],
