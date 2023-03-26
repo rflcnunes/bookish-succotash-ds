@@ -20,11 +20,19 @@ export default {
           "darkRed",
           "green",
           "darkGreen",
+          "statusYellow",
+          "statusBlue",
+          "statusRed",
+          "statusGreen",
+          "statusGray",
         ],
       },
     },
     text: {
       control: { type: "text" },
+    },
+    isStatusTag: {
+      control: { type: "boolean" },
     },
   },
 };

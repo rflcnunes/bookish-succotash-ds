@@ -1,5 +1,7 @@
 <template>
-  <span :style="tagStyle" class="am-tag">{{ text }}</span>
+  <span :style="tagStyle" :class="!isStatusTag ? 'am-tag' : 'am-status-tag'">{{
+    text
+  }}</span>
 </template>
 
 <script>
@@ -13,6 +15,10 @@ export default {
     variant: {
       type: String,
       default: "gray",
+    },
+    isStatusTag: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {
@@ -30,6 +36,11 @@ export default {
         darkRed: { background: "BF2600", fontColor: "FFEBE6" },
         green: { background: "E3FCEF", fontColor: "006644" },
         darkGreen: { background: "006644", fontColor: "E3FCEF" },
+        statusYellow: { background: "FDEBD0", fontColor: "B8770F" },
+        statusBlue: { background: "CCE6FD", fontColor: "0067C2" },
+        statusRed: { background: "F8DBD7", fontColor: "B84232" },
+        statusGreen: { background: "D5F0E4", fontColor: "017E46" },
+        statusGray: { background: "D6D6D6", fontColor: "5C5C5C" },
       };
       const { background, fontColor } = variants[this.variant];
       return {
@@ -44,9 +55,17 @@ export default {
 <style>
 .am-tag {
   padding: 5px 18px;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.am-status-tag {
+  padding: 5px 18px;
+  border-radius: 8px 15px 15px 8px;
+  font-size: 14px;
+  font-weight: 400;
   font-family: "Roboto", sans-serif;
 }
 </style>
