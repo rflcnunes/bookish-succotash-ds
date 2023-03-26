@@ -128,6 +128,17 @@ OnlyIconMediumOutlined.args = {
   size: "iconMedium",
 };
 
+export const OnlyIconMediumGhost = Template.bind({});
+OnlyIconMediumGhost.args = {
+  variant: "maxGhost",
+  icon: {
+    name: "close",
+    size: "small",
+    position: "withLeftIcon",
+  },
+  size: "iconMedium",
+};
+
 export const OnlyIconMediumDisabled = Template.bind({});
 OnlyIconMediumDisabled.args = {
   variant: "maxPrimary",
