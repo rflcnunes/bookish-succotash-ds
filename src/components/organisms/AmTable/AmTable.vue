@@ -30,7 +30,11 @@
       </thead>
       <tbody>
         <tr v-for="item in items" :key="item.id">
-          <td v-for="column in columns" :key="column.key">
+          <td
+            v-for="column in columns"
+            :key="column.key"
+            :class="{ filtered: column.filtered }"
+          >
             <div>
               {{ item[column.key] }}
             </div>
@@ -80,6 +84,7 @@ export default {
       return this.header.map((column) => ({
         ...column,
         key: column.key || column.label.toLowerCase().replace(" ", "_"),
+        filtered: column.key === this.sortColumn,
       }));
     },
     items() {
