@@ -1,0 +1,153 @@
+.am-button {
+  border-radius: 8px;
+  font-weight: 500;
+  font-family: $primaryFont;
+
+  &--primary {
+    background-color: $ocpPrimaryBlue;
+    color: $white;
+
+    &:hover {
+      background-color: $ocpPrimaryBlueHover;
+    }
+
+    &:active {
+      background-color: $ocpPrimaryBlueActive;
+    }
+  }
+
+  &--purple {
+    background-color: $ocpPrimaryPurple;
+    color: $white;
+
+    &:hover {
+      background-color: $ocpPrimaryPurpleHover;
+    }
+
+    &:active {
+      background-color: $ocpPrimaryPurpleActive;
+    }
+  }
+
+  &--maxPrimary {
+    background-color: $maxPrimaryPurple100;
+    color: $white;
+
+    &:hover {
+      background-color: $maxPrimaryPurple120;
+    }
+
+    &:active {
+      background-color: $maxPrimaryPurple80;
+    }
+
+    &:disabled {
+      background-color: $maxSystemGray60;
+      color: $white;
+      cursor: not-allowed;
+    }
+  }
+
+  &--maxOutlined {
+    background-color: transparent;
+    border: 1px solid $maxPrimaryPurple100;
+    color: $maxPrimaryPurple100;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $maxPrimaryPurple120;
+      color: $maxPrimaryPurple120;
+    }
+
+    &:active {
+      background-color: transparent;
+      border: 1px solid $maxPrimaryPurple80;
+      color: $maxPrimaryPurple80;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      border: 1px solid $maxSystemGray60;
+      color: $maxSystemGray60;
+      cursor: not-allowed;
+    }
+  }
+
+  &--maxGhost {
+    background-color: transparent;
+    color: $maxPrimaryPurple100;
+
+    &:hover {
+      background-color: $maxPrimaryPurple20;
+      color: $maxPrimaryPurple120;
+    }
+
+    &:active {
+      background-color: $maxPrimaryPurple20;
+      color: $maxPrimaryPurple80;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      color: $maxSystemGray60;
+      cursor: not-allowed;
+    }
+  }
+
+  &--maxSecondary {
+    background-color: $maxSystemBlue100;
+    color: $white;
+
+    &:hover {
+      background-color: $maxSystemBlue120;
+    }
+
+    &:active {
+      background-color: $maxSystemBlue80;
+    }
+
+    &:disabled {
+      background-color: $maxSystemGray60;
+      color: $white;
+      cursor: not-allowed;
+    }
+  }
+
+  &--maxSuccess {
+    background-color: $maxSuccess100;
+    color: $white;
+
+    &:hover {
+      background-color: $maxSuccess120;
+    }
+
+    &:active {
+      background-color: $maxSuccess80;
+    }
+
+    &:disabled {
+      background-color: $maxSystemGray60;
+      color: $white;
+      cursor: not-allowed;
+    }
+  }
+
+  &--maxError {
+    background-color: $maxError100;
+    color: $white;
+
+    &:hover {
+      background-color: $maxError120;
+    }
+
+    &:active {
+      background-color: $maxError80;
+    }
+
+    &:disabled {
+      background-color: $maxSystemGray60;
+      color: $white;
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.am-button {
+  &--tiny {
+    font-size: $extraSmall;
+    padding: 4px 12px;
+    width: 86px;
+    height: 24px;
+  }
+
+  &--small {
+    font-size: $small;
+    padding: 6px 12px;
+    min-width: 105px;
+    max-height: 28px;
+  }
+
+  &--medium {
+    font-size: $small;
+    padding: 8px 12px;
+    min-width: 121px;
+    max-height: 34px;
+  }
+
+  &--large {
+    font-size: $small;
+    padding: 8px 16px;
+    min-width: 113px;
+    max-height: 40px;
+  }
+
+  &--xlarge {
+    font-size: $small;
+    padding: 12px 24px;
+    min-width: 119px;
+    max-height: 48px;
+  }
+
+  &--xxlarge {
+    font-size: $large;
+    padding: 18px 28px;
+    min-width: 129px;
+    max-height: 48px;
+  }
+
+  &--iconTiny {
+    padding: 5px;
+    width: 24px;
+    height: 24px;
+  }
+
+  &--iconSmall {
+    padding: 6px;
+    width: 28px;
+    height: 28px;
+  }
+
+  &--iconMedium {
+    padding: 5px;
+    width: 34px;
+    height: 34px;
+  }
+
+  &--iconLarge {
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+  }
+
+  &--xIconLarge {
+    padding: 5px;
+    width: 48px;
+    height: 48px;
+  }
+
+  &--xxIconLarge {
+    padding: 5px;
+    width: 56px;
+    height: 56px;
+  }
+}
