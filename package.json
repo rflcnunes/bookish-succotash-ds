@@ -1,6 +1,6 @@
 {
   "name": "octopus-design-system",
-  "version": "4.0.2",
+  "version": "4.1.0",
   "description": "Octopus Design System, a Vue.js 2 component library",
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -80,6 +80,5 @@
       "pre-push": "npm run test:unit"
     }
   },
-  "readme": "ERROR: No README data found!",
-  "_id": "octopus-design-system@4.0.2"
+  "readme": "ERROR: No README data found!"
 }
