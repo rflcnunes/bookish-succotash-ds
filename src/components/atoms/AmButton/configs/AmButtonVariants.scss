@@ -60,6 +60,24 @@
     }
   }
 
+  &--outlined {
+    background-color: transparent;
+    border: 1px solid $maxPrimaryDarkBlue120;
+    color: $maxPrimaryDarkBlue120;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $maxTertiaryBlue100;
+      color: $maxTertiaryBlue100;
+    }
+
+    &:active {
+      background-color: transparent;
+      border: 1px solid $maxTertiaryBlue80;
+      color: $maxTertiaryBlue80;
+    }
+  }
+
   &--maxPrimary {
     background-color: $maxPrimaryPurple100;
     color: $white;

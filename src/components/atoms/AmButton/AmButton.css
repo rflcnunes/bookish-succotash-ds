@@ -37,24 +37,6 @@
   justify-content: center;
 }
 
-.am-button--outlined {
-  background-color: transparent;
-  color: #222;
-  border: 1px solid #d9d9d9;
-}
-
-.am-button--outlined:hover {
-  background-color: transparent;
-  color: #3875f6;
-  border-color: #3875f6;
-}
-
-.am-button--outlined:active {
-  background-color: transparent;
-  color: #2657d1;
-  border-color: #2657d1;
-}
-
 .am-button--green {
   color: white;
   background-color: #00b0a6;
