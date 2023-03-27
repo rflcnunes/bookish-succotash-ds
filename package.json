@@ -8,11 +8,12 @@
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -s public",
     "coverage": "vue-cli-service test:unit --coverage",
     "prepare": "husky install",
-    "storybook": "start-storybook -p 6006",
-    "chromatic": "npx chromatic --project-token=9e93c5191a6d"
+    "storybook": "start-storybook -p 6006 -s public",
+    "chromatic": "npx chromatic --project-token=9e93c5191a6d",
+    "serve-storybook": "serve storybook-static"
   },
   "dependencies": {
     "core-js": "^3.8.3",
