@@ -29,6 +29,24 @@
     }
   }
 
+  &--dashed {
+    background-color: transparent;
+    color: $maxPrimaryDarkBlue60;
+    border: 1px dashed $maxPrimaryDarkBlue60;
+
+    &:hover {
+      background-color: transparent;
+      color: $maxPrimaryDarkBlue120;
+      border: 1px dashed $maxPrimaryDarkBlue120;
+    }
+
+    &:active {
+      background-color: transparent;
+      color: $maxTertiaryBlue120;
+      border: 1px dashed $maxTertiaryBlue120;
+    }
+  }
+
   &--maxPrimary {
     background-color: $maxPrimaryPurple100;
     color: $white;

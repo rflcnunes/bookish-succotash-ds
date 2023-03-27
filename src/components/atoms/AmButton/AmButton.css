@@ -37,24 +37,6 @@
   justify-content: center;
 }
 
-.am-button--dashed {
-  background-color: transparent;
-  color: #222;
-  border: 1px dashed #d9d9d9;
-}
-
-.am-button--dashed:hover {
-  background-color: #ffffff;
-  color: #3875f6;
-  border-color: #3875f6;
-}
-
-.am-button--dashed:active {
-  background-color: #ffffff;
-  color: #2657d1;
-  border-color: #2657d1;
-}
-
 .am-button--error {
   color: white;
   background-color: #ff5962;
