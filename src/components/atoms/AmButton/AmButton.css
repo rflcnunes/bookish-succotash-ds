@@ -37,19 +37,6 @@
   justify-content: center;
 }
 
-.am-button--error {
-  color: white;
-  background-color: #ff5962;
-}
-
-.am-button--error:hover {
-  background-color: #ff777f;
-}
-
-.am-button--error:active {
-  background-color: #e44b53;
-}
-
 .am-button--outlined {
   background-color: transparent;
   color: #222;

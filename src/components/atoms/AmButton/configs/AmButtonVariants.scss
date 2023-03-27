@@ -47,6 +47,19 @@
     }
   }
 
+  &--error {
+    background-color: $maxError100;
+    color: $white;
+
+    &:hover {
+      background-color: $maxError120;
+    }
+
+    &:active {
+      background-color: $maxError80;
+    }
+  }
+
   &--maxPrimary {
     background-color: $maxPrimaryPurple100;
     color: $white;
