@@ -78,6 +78,19 @@
     }
   }
 
+  &--green {
+    background-color: $maxSuccess100;
+    color: $white;
+
+    &:hover {
+      background-color: $maxSuccess120;
+    }
+
+    &:active {
+      background-color: $maxSuccess80;
+    }
+  }
+
   &--maxPrimary {
     background-color: $maxPrimaryPurple100;
     color: $white;

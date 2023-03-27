@@ -37,19 +37,6 @@
   justify-content: center;
 }
 
-.am-button--green {
-  color: white;
-  background-color: #00b0a6;
-}
-
-.am-button--green:hover {
-  background-color: #37c9c0;
-}
-
-.am-button--green:active {
-  background-color: #00968d;
-}
-
 .am-button--yellow {
   background-color: #fdcd3b;
   color: #000000;
