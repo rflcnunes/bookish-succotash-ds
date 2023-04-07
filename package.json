@@ -1,6 +1,6 @@
 {
   "name": "octopus-design-system",
-  "version": "4.6.0",
+  "version": "4.7.0",
   "description": "Octopus Design System, a Vue.js 2 component library",
   "scripts": {
     "serve": "vue-cli-service serve",
