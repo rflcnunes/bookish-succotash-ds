@@ -21,7 +21,7 @@ Each component is imported from the "components" folder, which includes sub-fold
 </template>
 
 <script>
-import { AmButton } from "octopus-design-system/src/components/atoms/AmButton/AmButton.vue";
+import AmButton from "octopus-design-system/src/components/atoms/AmButton/AmButton.vue";
 
 export default {
   name: "MyComponent",
