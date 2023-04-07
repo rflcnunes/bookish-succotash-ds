@@ -28,6 +28,7 @@ export default {
           "maxPrimary",
           "maxOutlined",
           "maxGhost",
+          "maxDarkGhost",
           "maxSecondary",
           "maxSuccess",
           "maxError",

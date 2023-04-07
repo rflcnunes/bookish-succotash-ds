@@ -204,6 +204,27 @@
     }
   }
 
+  &--maxDarkGhost {
+    background-color: transparent;
+    color: $maxText100;
+
+    &:hover {
+      background-color: $maxText120;
+      color: $maxText120;
+    }
+
+    &:active {
+      background-color: $maxText20;
+      color: $maxText20;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      color: $maxSystemGray60;
+      cursor: not-allowed;
+    }
+  }
+
   &--maxSecondary {
     background-color: $maxSystemBlue100;
     color: $white;
