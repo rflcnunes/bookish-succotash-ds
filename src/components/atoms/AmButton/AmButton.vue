@@ -107,7 +107,7 @@ export default {
   methods: {
     onClick() {
       this.isClicked = true;
-      this.$emit("click");
+      this.$emit("clickAmButton");
     },
   },
 };
