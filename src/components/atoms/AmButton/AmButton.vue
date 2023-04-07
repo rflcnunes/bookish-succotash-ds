@@ -23,7 +23,6 @@ import AmIcon from "../AmIcon/AmIcon.vue";
 import AmTypography from "../AmTypography/AmTypography.vue";
 import "./AmButton.css";
 import "./AmButton.scss";
-import { reactive, toRefs } from "vue";
 
 export default {
   name: "AmButton",
@@ -87,22 +86,12 @@ export default {
       default: "medium",
     },
   },
-  setup(props, { emit }) {
-    const state = reactive({
-      isClicked: false,
-    });
-
-    function onClick() {
-      state.isClicked = true;
-      emit("click");
-    }
-
+  components: { AmIcon, AmTypography },
+  data() {
     return {
-      ...toRefs(state),
-      onClick,
+      isClicked: false,
     };
   },
-  components: { AmIcon, AmTypography },
   computed: {
     buttonClasses() {
       return [
@@ -113,6 +102,12 @@ export default {
         { "am-button--icon": this.icon && this.label },
         { "am-button--icon-only": this.icon && !this.label },
       ];
+    },
+  },
+  methods: {
+    onClick() {
+      this.isClicked = true;
+      this.$emit("click");
     },
   },
 };
