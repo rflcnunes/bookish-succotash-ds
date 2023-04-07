@@ -23,7 +23,7 @@ import AmIcon from "../AmIcon/AmIcon.vue";
 import AmTypography from "../AmTypography/AmTypography.vue";
 import "./AmButton.css";
 import "./AmButton.scss";
-import { reactive } from "vue";
+import { reactive, toRefs } from "vue";
 
 export default {
   name: "AmButton",
@@ -98,6 +98,7 @@ export default {
     }
 
     return {
+      ...toRefs(state),
       onClick,
     };
   },
