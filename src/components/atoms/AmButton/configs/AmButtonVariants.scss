@@ -206,16 +206,16 @@
 
   &--maxDarkGhost {
     background-color: transparent;
-    color: $maxText100;
+    color: $maxPrimaryDarkBlue100;
 
     &:hover {
-      background-color: $maxText120;
-      color: $maxText120;
+      background-color: $fwbGrayPrimary20;
+      color: $maxPrimaryDarkBlue120;
     }
 
     &:active {
-      background-color: $maxText20;
-      color: $maxText20;
+      background-color: $fwbGrayPrimary30;
+      color: $maxPrimaryDarkBlue120;
     }
 
     &:disabled {
