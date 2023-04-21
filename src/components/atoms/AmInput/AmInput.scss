@@ -1,0 +1,64 @@
+@import "../../../styles/_variables.scss";
+
+.am-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+  align-items: flex-start;
+
+  label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.9rem;
+  }
+
+  &-container {
+    position: relative;
+
+    input {
+      border: 1.5px solid $fwbGrayPrimary70;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      padding: 0.4rem 0 0.5rem 0.5rem;
+      width: 100%;
+
+      &:focus {
+        border: 1.5px solid $maxPrimaryPurple120;
+        outline: none;
+      }
+
+      &:hover {
+        border: 1.5px solid $maxPrimaryPurple100;
+      }
+    }
+
+    .am-input-icon {
+      position: absolute;
+      top: 55%;
+      right: 0.5rem;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    &--md {
+      width: 15rem;
+    }
+
+    &--lg {
+      width: 20rem;
+    }
+
+    &--fullWidht {
+      width: 98%;
+    }
+
+    &:hover {
+      color: $maxPrimaryPurple100;
+    }
+
+    &:focus {
+      color: $maxPrimaryPurple120;
+    }
+  }
+}
