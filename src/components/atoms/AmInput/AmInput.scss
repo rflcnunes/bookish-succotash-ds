@@ -27,7 +27,6 @@
 
   &__container--xs {
     width: $inputExtraSmall;
-    
   }
 
   &__container--sm {
@@ -67,6 +66,15 @@
 
     &:hover {
       border: 1.5px solid $maxPrimaryPurple100;
+    }
+
+    &:-webkit-autofill {
+      border: 1.5px solid $maxPrimaryPurple120;
+      -webkit-box-shadow: 0 0 0 30px $maxPrimaryPurple20 inset;
+    }
+
+    &:-webkit-autofill {
+      -webkit-text-fill-color: $maxPrimaryPurple120;
     }
   }
 
