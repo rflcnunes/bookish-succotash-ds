@@ -54,11 +54,12 @@
   }
 
   &__field {
-    border: 1.5px solid $fwbGrayPrimary70;
+    border: 1.5px solid $maxSystemGray20;
     border-radius: 0.25rem;
     font-size: 1rem;
     padding: 0.4rem 0 0.5rem 0.5rem;
     width: 100%;
+
     &:focus {
       border: 1.5px solid $maxPrimaryPurple120;
       outline: none;
