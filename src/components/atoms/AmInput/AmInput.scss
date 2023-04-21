@@ -77,6 +77,10 @@
     &:-webkit-autofill {
       -webkit-text-fill-color: $maxPrimaryPurple120;
     }
+
+    &::placeholder {
+      color: $maxSystemGray20;
+    }
   }
 
   &__icon {
