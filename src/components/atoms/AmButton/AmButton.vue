@@ -82,6 +82,7 @@ export default {
           "iconLarge",
           "xIconLarge",
           "xxIconLarge",
+          "fullWidth",
         ].includes(value),
       default: "medium",
     },
