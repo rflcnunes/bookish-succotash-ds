@@ -4,9 +4,9 @@
       :label="label"
       weight="normal"
       color="black"
-      class="am-input-label"
+      class="am-input__label"
     />
-    <div :class="['am-input-container', `am-input-container--${size}`]">
+    <div :class="['am-input__container', `am-input__container--${size}`]">
       <input
         :type="type === 'password' && showPassword ? 'text' : type"
         :id="name"
@@ -14,29 +14,30 @@
         :placeholder="placeholder"
         :value="value"
         @input="$emit('input', $event.target.value)"
+        class="am-input__field"
       />
       <span
         v-if="type === 'password'"
-        class="am-input-icon"
+        class="am-input__icon"
         @click="showPassword = !showPassword"
       >
         <i :class="['material-icons']">{{
           showPassword ? "visibility_off" : "visibility"
         }}</i>
       </span>
-      <span v-if="icon" class="am-input-icon">
+      <span v-if="icon" class="am-input__icon">
         <i :class="['material-icons']">{{ icon }}</i>
       </span>
     </div>
   </div>
 </template>
-
 <script>
 import AmTypography from "../AmTypography/AmTypography.vue";
 import "./AmInput.scss";
 
 export default {
   name: "AmInput",
+  components: { AmTypography },
   props: {
     label: {
       type: String,
@@ -66,7 +67,7 @@ export default {
       type: String,
       default: "md",
       validator: (value) =>
-        ["xs", "sm", "md", "lg", "fullWidth"].includes(value),
+        ["xs", "sm", "md", "lg", "xl", "xxl", "fullWidth"].includes(value),
     },
   },
   data() {
@@ -74,6 +75,5 @@ export default {
       showPassword: false,
     };
   },
-  components: { AmTypography },
 };
 </script>
