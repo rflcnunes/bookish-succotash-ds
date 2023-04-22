@@ -3,7 +3,7 @@
     <AmTypography
       :label="label"
       weight="medium"
-      color="black"
+      color="gray100"
       class="am-input__label"
     />
     <div :class="['am-input__container', `am-input__container--${size}`]">
