@@ -16,6 +16,7 @@
     "serve-storybook": "serve storybook-static"
   },
   "dependencies": {
+    "@storybook/addon-docs": "^7.0.6",
     "core-js": "^3.8.3",
     "currency.js": "^2.0.4",
     "material-icons": "^1.13.3",

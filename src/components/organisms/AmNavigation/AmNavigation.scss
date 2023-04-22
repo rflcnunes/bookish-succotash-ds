@@ -29,11 +29,13 @@
   }
 
   &__link {
-    display: block;
+    display: flex;
     color: #fff;
     text-decoration: none;
     padding: 5px;
     transition: all 0.2s ease;
+    align-items: center;
+    gap: 4px;
   }
 
   &:hover, &__link {

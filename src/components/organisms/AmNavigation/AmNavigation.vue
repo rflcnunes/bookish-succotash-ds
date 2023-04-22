@@ -8,11 +8,15 @@
         class="nav__item"
         @mouseover="hoverIndex = index"
         @mouseout="hoverIndex = null"
-        @click="selectOption(index)"
+        @click="
+          selectOption(index);
+          performAction(option);
+        "
       >
-        <router-link class="nav__link" :to="{ name: option.routeName }">
+        <a class="nav__link">
+          <AmIcon v-if="option.icon" :icon="option.icon" class="nav__icon" />
           <AmTypography :label="option.label" weight="normal" />
-        </router-link>
+        </a>
       </li>
     </ul>
   </nav>
@@ -21,6 +25,7 @@
 <script>
 import "./AmNavigation.scss";
 import AmTypography from "../../atoms/AmTypography/AmTypography.vue";
+import AmIcon from "../../atoms/AmIcon/AmIcon.vue";
 
 export default {
   name: "AmNavigation",
@@ -40,7 +45,15 @@ export default {
     selectOption(index) {
       this.selected = index;
     },
+    performAction(option) {
+      if (option.action) {
+        option.action();
+      }
+      if (option.methodName) {
+        this.$emit(option.methodName);
+      }
+    },
   },
-  components: { AmTypography },
+  components: { AmTypography, AmIcon },
 };
 </script>
