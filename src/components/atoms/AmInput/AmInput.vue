@@ -10,6 +10,7 @@
       <input
         :type="type === 'password' && showPassword ? 'text' : type"
         :id="name"
+        :autocomplete="autoComplete"
         :name="name"
         :placeholder="placeholder"
         :value="value"
@@ -68,6 +69,11 @@ export default {
       default: "md",
       validator: (value) =>
         ["xs", "sm", "md", "lg", "xl", "xxl", "fullWidth"].includes(value),
+    },
+    autoComplete: {
+      type: String,
+      default: "off",
+      validator: (value) => ["on", "off"].includes(value),
     },
   },
   data() {
