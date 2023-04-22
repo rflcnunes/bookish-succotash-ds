@@ -1,0 +1,116 @@
+@import "../../../styles/_variables.scss";
+
+.am-typography {
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+
+  &--xs {
+    font-size: 12px;
+  }
+
+  &--sm {
+    font-size: 14px;
+  }
+
+  &--md {
+    font-size: 16px;
+  }
+
+  &--lg {
+    font-size: 18px;
+  }
+
+  &--xl {
+    font-size: 20px;
+  }
+
+  &--xxl {
+    font-size: 24px;
+  }
+
+  &--xxl2 {
+    font-size: 28px;
+  }
+
+  &--regular {
+    font-family: "Roboto", sans-serif;
+  }
+
+  &--condensed {
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  &--slab {
+    font-family: "Roboto Slab", serif;
+  }
+
+  &--normal {
+    font-weight: 400;
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--xbold {
+    font-weight: 900;
+  }
+
+  &--black {
+    color: $maxPrimaryDarkBlue120;
+  }
+
+  &--blue100 {
+    color: $maxTertiaryBlue100;
+  }
+
+  &--blue120 {
+    color: $maxTertiaryBlue120;
+  }
+
+  &--blue80 {
+    color: $maxTertiaryBlue80;
+  }
+
+  &--gray100 {
+    color: $maxText100;
+  }
+
+  &--gray80 {
+    color: $maxText80;
+  }
+
+  &--red {
+    color: $maxError100;
+  }
+
+  &--green {
+    color: $maxSuccess100;
+  }
+
+  &--yellow {
+    color: $maxWarning100;
+  }
+
+  &--white {
+    color: $maxSystemGray120;
+  }
+
+  &--purple100 {
+    color: $maxPrimaryPurple100;
+  }
+
+  &--purple120 {
+    color: $maxPrimaryPurple120;
+  }
+
+  &--purple80 {
+    color: $maxPrimaryPurple80;
+  }
+}
