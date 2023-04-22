@@ -1,0 +1,42 @@
+@import "../../../styles/_variables.scss";
+
+.nav {
+  display: flex;
+  width: fit-content;
+
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin: 0 2px;
+    padding: 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &--selected {
+      border-bottom: 2px solid $maxPrimaryPurple120;
+    }
+
+    &:hover,
+    &:focus {
+      border-bottom: 2px solid $maxPrimaryPurple120;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    transition: all 0.2s ease;
+  }
+
+  &:hover, &__link {
+    color: $maxText100;
+  }
+}
