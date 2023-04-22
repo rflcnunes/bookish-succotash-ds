@@ -46,6 +46,12 @@ export default {
   methods: {
     selectOption(index) {
       this.selected = index;
+
+      this.options.forEach((option) => {
+        if (option.selected) {
+          option.selected = false;
+        }
+      });
     },
     performAction(option) {
       if (option.action) {
