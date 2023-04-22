@@ -37,7 +37,7 @@ export default {
       type: String,
       default: "black",
       validator: (value) =>
-        ["black", "blue", "red", "gray", "white"].includes(value),
+        ["black", "blue", "red", "gray", "white", "purple"].includes(value),
     },
     label: {
       type: String,
@@ -125,5 +125,9 @@ export default {
 
 .am-typography--red {
   color: #dc3545;
+}
+
+.am-typography--purple {
+  color: #9b6afa;
 }
 </style>
