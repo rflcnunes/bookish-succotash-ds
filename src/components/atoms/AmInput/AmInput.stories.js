@@ -1,7 +1,7 @@
 import AmInput from "./AmInput.vue";
 
 export default {
-  title: "AmInput",
+  title: "Atoms/AmInput",
   component: AmInput,
   argTypes: {
     label: { control: "text" },

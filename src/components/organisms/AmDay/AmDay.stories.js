@@ -1,7 +1,7 @@
 import AmDay from "./AmDay.vue";
 
 export default {
-  title: "AmDay",
+  title: "Organisms/AmDay",
   component: AmDay,
   argTypes: {
     userName: { control: "text" },
