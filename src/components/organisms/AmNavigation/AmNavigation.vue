@@ -4,7 +4,9 @@
       <li
         v-for="(option, index) in options"
         :key="index"
-        :class="{ 'nav__item--selected': selected === index }"
+        :class="{
+          'nav__item--selected': selected === index || option.selected,
+        }"
         class="nav__item"
         @mouseover="hoverIndex = index"
         @mouseout="hoverIndex = null"
