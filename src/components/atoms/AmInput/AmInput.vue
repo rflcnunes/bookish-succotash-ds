@@ -2,7 +2,7 @@
   <div class="am-input">
     <AmTypography
       :label="label"
-      weight="medium"
+      weight="normal"
       color="gray100"
       class="am-input__label"
     />
