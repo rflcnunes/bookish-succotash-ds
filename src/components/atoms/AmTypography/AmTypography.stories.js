@@ -19,7 +19,7 @@ export default {
     weight: {
       control: {
         type: "select",
-        options: ["normal", "medium", "bold", "xbold"],
+        options: ["light", "normal", "medium", "bold", "xbold"],
       },
     },
     color: {

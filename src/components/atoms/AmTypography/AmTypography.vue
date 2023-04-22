@@ -33,7 +33,7 @@ export default {
       type: String,
       default: "medium",
       validator: (value) =>
-        ["normal", "medium", "bold", "xbold"].includes(value),
+        ["light", "normal", "medium", "bold", "xbold"].includes(value),
     },
     color: {
       type: String,
