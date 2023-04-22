@@ -5,7 +5,7 @@
         variant="regular"
         weight="medium"
         size="sm"
-        color="blue"
+        color="blue100"
         :label="headerInformation.title"
       />
       <AmTypography
@@ -18,7 +18,7 @@
         size="sm"
         weight="medium"
         variant="regular"
-        color="gray"
+        color="gray80"
         :label="headerInformation.description"
       />
     </div>
@@ -38,13 +38,13 @@
           <AmTypography
             variant="regular"
             size="sm"
-            color="gray"
+            color="gray80"
             :label="product.description"
           />
           <AmTypography
             variant="regular"
             weight="medium"
-            color="blue"
+            color="blue100"
             :label="formattedPrice(product.price)"
           />
         </div>
