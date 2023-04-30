@@ -16,6 +16,18 @@
     }
   }
 
+  &--dark {
+    background-color: $fwbGrayPrimary90;
+
+    &:hover {
+      background-color: $fwbGrayPrimary80;
+    }
+
+    &:active {
+      background-color: $fwbGrayPrimary70;
+    }
+  }
+
   &--purple {
     background-color: $ocpPrimaryPurple;
     color: $white;

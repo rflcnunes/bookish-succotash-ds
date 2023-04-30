@@ -32,6 +32,7 @@ export default {
       validator: (value) =>
         [
           "primary",
+          "dark",
           "dashed",
           "purple",
           "error",

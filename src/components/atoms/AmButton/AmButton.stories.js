@@ -25,6 +25,7 @@ export default {
         type: "select",
         options: [
           "primary",
+          "dark",
           "dashed",
           "purple",
           "error",
