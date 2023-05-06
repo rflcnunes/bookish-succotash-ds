@@ -8,13 +8,12 @@
     />
     <div :class="['am-input__container', `am-input__container--${size}`]">
       <input
-        :type="type === 'password' && showPassword ? 'text' : type"
+        :type="inputType"
         :id="name"
         :autocomplete="autoComplete"
         :name="name"
         :placeholder="placeholder"
-        :value="value"
-        @input="$emit('input', $event.target.value)"
+        @input="updateValue"
         class="am-input__field"
       />
       <span
@@ -32,6 +31,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import AmTypography from "../AmTypography/AmTypography.vue";
 import "./AmInput.scss";
@@ -79,7 +79,21 @@ export default {
   data() {
     return {
       showPassword: false,
+      inputValue: this.value,
     };
+  },
+  computed: {
+    inputType() {
+      return this.type === "password" && !this.showPassword
+        ? "password"
+        : "text";
+    },
+  },
+  methods: {
+    updateValue(event) {
+      this.inputValue = event.target.value;
+      this.$emit("input", this.inputValue);
+    },
   },
 };
 </script>
